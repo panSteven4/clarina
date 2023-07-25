@@ -1,5 +1,19 @@
-.row {
+a {
+    text-decoration: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nav {
     display: flex;
     justify-content: space-around;
     background-color: #CE053F;
+    align-items: center;
+}
+
+.col {
+    padding: 10px;
+
 }

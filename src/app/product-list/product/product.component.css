@@ -1,0 +1,10 @@
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row img {
+    max-width: 190px;
+    max-height: 200px;
+}
