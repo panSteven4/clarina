@@ -1,9 +1,12 @@
 a {
+    display:block;
     text-decoration: none;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    color: white;
+    line-height: 14px;
 }
 
 .nav {
@@ -11,9 +14,129 @@ a {
     justify-content: space-around;
     background-color: #CE053F;
     align-items: center;
+    font-size: 8.6px;
 }
 
 .col {
     padding: 10px;
+}
+
+.dech-nast {
+    background-image:url(../../../assets/menu_dechove.png);
+    padding-bottom: 19px;
+    padding-top:19px;
+    padding-left:10px;
+    padding-right: 17.5px;
+}
+
+.smy-nast {
+    background-image:url(../../../assets/menu_smyccove.png);
+    padding-bottom: 21px;
+    padding-top:21px;
+    padding-left:10px;
+    padding-right: 14px;
+    margin-right: 5px;
+}
+
+
+.stru-nast {
+    background-image:url(../../../assets/menu_strune-drnkaci.png);
+    padding-bottom: 19px;
+    padding-top:19px;
+    padding-left:9px;
+    padding-right: 9px;
+    margin-right: 5px;
+}
+
+.kla-nast {
+    background-image:url(../../../assets/menu_klavesove.png);
+    padding-left:10px;
+    padding-right: 13px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.ko-nast {
+    background-image:url(../../../assets/menu_bici-perkuse.png);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left:15px;
+    padding-right: 15px;
+    margin-right: 5px;
+}
+
+.noty  {
+    background-image:url(../../../assets/menu_noty.png);
+    margin-bottom: 10px;
+    padding-left:10px;
+    padding-right: 16px;
+    margin-right: 5px;
+}
+
+.darkove {
+    background-image:url(../../../assets/menu_darky.png);
+    padding-bottom: 14px;
+    padding-top:13px;
+    margin-bottom: 2px;
+    padding-left:10px;
+    padding-right: 16px;
+    margin-right: 5px;
+}
+
+.icon-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.kategorie {
+    display: none;
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .nast {
+        display: none;
+    }
+
+    .kategorie {
+        display: none;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .col {
+        display:none;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: left;
+    }
+
+    .kategorie {
+        display: flex;
+        position: relative;
+        align-items: center;
+        font-size: 14px;
+        color: white;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    .kategorie:hover {
+        cursor:pointer;
+    }
+
+
+    .kategorie-img {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        border: solid rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+        border-width: 1px
+    }
+
 
 }
