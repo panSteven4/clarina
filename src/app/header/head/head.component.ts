@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./head.component.css']
 })
 export class HeadComponent {
+  clicked: boolean = false;
 
+  dropItDown(){
+    this.clicked = !this.clicked;
+  }
 }

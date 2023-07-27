@@ -38,15 +38,20 @@
             </span>
         </div>
     </a>
-    <div class="col">
-        <a href="#">
+    <div class="col lang-btn-container">
+        <button (click)="dropItDown()" class="lang-btn">
             <span>
                 CZ
             </span>
             <span class="material-symbols-outlined">
                 arrow_drop_down
             </span>
-        </a>
+        </button>
+        <div *ngIf="clicked" class="dropdown-content">
+            <a href="#">Česky</a>
+            <a href="#">Slovensky</a>
+            <a href="#">Německy</a>
+        </div>
     </div>
 </div>
 
