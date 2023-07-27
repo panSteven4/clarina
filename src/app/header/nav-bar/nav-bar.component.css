@@ -19,6 +19,8 @@ a {
 
 .col {
     padding: 10px;
+    border-right: 1px solid black;
+    flex-grow: 1;
 }
 
 .dech-nast {
@@ -31,6 +33,7 @@ a {
 
 .smy-nast {
     background-image:url(../../../assets/menu_smyccove.png);
+    margin-top: -6px;
     padding-bottom: 21px;
     padding-top:21px;
     padding-left:10px;
@@ -92,8 +95,6 @@ a {
     display: none;
 }
 
-
-
 @media (min-width: 992px) and (max-width: 1199px){
     .nast {
         display: none;
@@ -121,8 +122,8 @@ a {
         align-items: center;
         font-size: 14px;
         color: white;
-        margin-top: 7px;
-        margin-bottom: 7px;
+        margin-top: 9px;
+        margin-bottom: 9px;
     }
 
     .kategorie:hover {
