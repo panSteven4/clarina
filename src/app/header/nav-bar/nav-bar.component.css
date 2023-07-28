@@ -46,6 +46,19 @@ a {
     background-repeat: no-repeat;
 }
 
+.dropdown-content {
+    display:flex;
+    flex-direction: column;
+}
+
+.col:hover {
+    background-color: white;
+}
+
+.col:hover > a {
+    color: black;
+}
+
 @media (min-width: 992px) and (max-width: 1199px){
     .img {
         display: none;
