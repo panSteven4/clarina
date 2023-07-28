@@ -1,0 +1,66 @@
+.animation-box {
+    height: 320px;
+    background-color: #4C0F17;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-box {
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    background-color: #FBF3EC;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.num  {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    color: #604e51;
+}
+
+.animation-item {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.animation-item-item {
+    padding: 15px;
+}
+
+.title {
+    color: white;
+    font-size: 54px;
+}
+
+.description {
+    color: #f1d7c2;
+    font-size: 22px;
+}
+
+.vice-btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.btn-arrow {
+    color: #CE053F;
+}
+
+
+
+
+@media (max-width: 991px) {
+    .container {
+        display:none;
+    }
+}

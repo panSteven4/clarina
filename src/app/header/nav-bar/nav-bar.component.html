@@ -1,24 +1,24 @@
 <div class="nav">
     <div class="col">
-        <a href="#" class="icon-flex"><img src="../../../assets/menu_dechove.png" alt="dech" class="img">DECHOVÉ<br>NÁSTROJE</a>
+        <a href="#" class="icon-flex"><img src="assets/menu_dechove.png" alt="dech" class="img">DECHOVÉ NÁSTROJE</a>
     </div>
     <div class="col">
-        <a href="#" class="icon-flex"><img src="../../../assets/menu_smyccove.png" alt="smyčec" class="img">SMYČCOVÉ<br>NÁSTROJE</a>
+        <a href="#" class="icon-flex"><img src="assets/menu_smyccove.png" alt="smyčec" class="img">SMYČCOVÉ NÁSTROJE</a>
     </div>
     <div class="col">
-        <a href="#" class="icon-flex"><img src="../../../assets/menu_strune-drnkaci.png" alt="strunné" class="img">STRUNNÉ A<br>DRNKACÍ<br>NÁSTROJE</a>
+        <a href="#" class="icon-flex"><img src="assets/menu_strune-drnkaci.png" alt="strunné" class="img">STRUNNÉ A DRNKACÍ NÁSTROJE</a>
     </div>
     <div class="col">
-        <a href="#" class="icon-flex"><img src="../../../assets/menu_klavesove.png" alt="klaves" class="img">KLÁVESOVÉ<br>NÁSTROJE</a>
+        <a href="#" class="icon-flex"><img src="assets/menu_klavesove.png" alt="klaves" class="img">KLÁVESOVÉ NÁSTROJE</a>
     </div>
     <div class="col">
-        <a href="#" class="icon-flex"><img src="../../../assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ<br>NÁSTROJE A<br>PERKUSE</a>
+        <a href="#" class="icon-flex"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
     </div>
     <div class="col">
-        <a href="#" class="icon-flex"><img src="../../../assets/menu_noty.png" alt="noty" class="img">NOTY PRO<br>HUDEBNÍ<br>NÁSTROJE</a>
+        <a href="#" class="icon-flex"><img src="assets/menu_noty.png" alt="noty" class="img">NOTY PRO HUDEBNÍ NÁSTROJE</a>
     </div>
     <div class="col">
-        <a href="#" class="icon-flex"><img src="../../../assets/menu_darky.png" alt="darkove" class="img">DÁRKOVÉ ZBOŽÍ</a>
+        <a href="#" class="icon-flex"><img src="assets/menu_darky.png" alt="darkove" class="img">DÁRKOVÉ ZBOŽÍ</a>
     </div>
     <div class="col last-col">
         <a href="#" class="icon-flex">PŘÍSLUŠENSTVÍ</a>
@@ -26,7 +26,7 @@
 
     <!-- @media (max-width: 991px) -->
     <div class="kategorie-container">
-        <button class="kategorie" (click)="dropItDown()">
+        <button class="kategorie" (click)="toggle()">
             <span class="material-symbols-outlined kategorie-img">
                 menu
             </span>
@@ -34,15 +34,15 @@
                 Kategorie
             </span>
         </button>
-        <div *ngIf="clicked" class="dropdown-content">
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_dechove.png" alt="dech" class="img">DECHOVÉ NÁSTROJE</a>
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_smyccove.png" alt="smyčec" class="img">SMYČCOVÉ NÁSTROJE</a>
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_strune-drnkaci.png" alt="strunné" class="img">STRUNNÉ A DRNKACÍ NÁSTROJE</a>
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_klavesove.png" alt="klaves" class="img">KLÁVESOVÉ NÁSTROJE</a>
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_noty.png" alt="noty" class="img">NOTY PRO HUDEBNÍ NÁSTROJE</a>
-            <a href="#" class="icon-flex"><img src="../../../assets/menu_darky.png" alt="darkove" class="img">DÁRKOVÉ ZBOŽÍ</a>
+        <div [ngClass]="{hidden: !isDropped}" class="dropdown-content">
+            <a href="#" class="icon-flex"><img src="assets/menu_dechove.png" alt="dech" class="img">DECHOVÉ NÁSTROJE</a>
+            <a href="#" class="icon-flex"><img src="assets/menu_smyccove.png" alt="smyčec" class="img">SMYČCOVÉ NÁSTROJE</a>
+            <a href="#" class="icon-flex"><img src="assets/menu_strune-drnkaci.png" alt="strunné" class="img">STRUNNÉ A DRNKACÍ NÁSTROJE</a>
+            <a href="#" class="icon-flex"><img src="assets/menu_klavesove.png" alt="klaves" class="img">KLÁVESOVÉ NÁSTROJE</a>
+            <a href="#" class="icon-flex"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
+            <a href="#" class="icon-flex"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
+            <a href="#" class="icon-flex"><img src="assets/menu_noty.png" alt="noty" class="img">NOTY PRO HUDEBNÍ NÁSTROJE</a>
+            <a href="#" class="icon-flex"><img src="assets/menu_darky.png" alt="darkove" class="img">DÁRKOVÉ ZBOŽÍ</a>
             <a href="#" class="icon-flex">PŘÍSLUŠENSTVÍ</a>
         </div>
     </div>

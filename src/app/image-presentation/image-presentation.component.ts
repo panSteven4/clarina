@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./image-presentation.component.css']
 })
 export class ImagePresentationComponent {
+  current_number: number = 1; // TODO - animace
+
 
 }

@@ -1,23 +1,23 @@
 <div class="row">
     <div class="col">
-        <a href="#"><img src="../../assets/logo.png" alt="clarinalogo" class="logo-img"></a>
+        <a href="#"><img src="/assets/logo.png" alt="clarinalogo" class="logo-img"></a>
     </div>
     <div class="col">
         <a href="#" class="center-vertical registrace">
             <span class="material-symbols-outlined">
                 person_add
             </span>
-            <span class="registrace-text">
+            <span class="registration-text">
                 Registrace
             </span>
         </a>
     </div>
     <div class="col">
-        <a href="#" class="center-vertical prihlaseni">
+        <a href="#" class="center-vertical login">
             <span class="material-symbols-outlined">
                 login
             </span>
-            <span class="prihlaseni-text">
+            <span class="login-text">
                 Přihlášení
             </span>
         </a>
@@ -39,7 +39,7 @@
         </div>
     </a>
     <div class="col lang-btn-container">
-        <button (click)="dropItDown()" class="lang-btn">
+        <button (click)="toggle()" class="lang-btn" >
             <span>
                 CZ
             </span>
@@ -47,7 +47,7 @@
                 arrow_drop_down
             </span>
         </button>
-        <div *ngIf="clicked" class="dropdown-content">
+        <div class="dropdown-content" [ngClass]="{hidden: !clicked}">
             <a href="#">Česky</a>
             <a href="#">Slovensky</a>
             <a href="#">Německy</a>

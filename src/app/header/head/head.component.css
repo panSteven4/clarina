@@ -10,8 +10,6 @@ a {
     background-color: #F8EBE0;
     align-items: center;
     font-size: 14px;
-    --main-red: #CE053F;
-    --main-background: #F8EBE0;
 }
 
 .col {
@@ -33,14 +31,6 @@ a {
     color: white;
     padding: 0.3em;
 }
-
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-  }
 
 .cart-text {
     margin-left: 0.4em;
@@ -74,6 +64,10 @@ a {
     position: relative;
 }
 
+.dropdown-content.hidden {
+    display: none;
+}
+
 .dropdown-content {
     position: absolute;
     top: 75%;
@@ -105,11 +99,11 @@ a {
     color: var(--main-red);
 }
 
-.registrace:hover {
+.registration:hover {
     color: var(--main-red);
 }
 
-.prihlaseni:hover {
+.login:hover {
     color: var(--main-red);
 }
 
@@ -158,11 +152,11 @@ input:focus::placeholder {
         display:none;
     }
     
-    .prihlaseni-text {
+    .login-text {
         display:none;
     }
 
-    .registrace-text {
+    .registration-text {
         display: none;
     }
 

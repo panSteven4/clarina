@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HeadComponent {
   clicked: boolean = false;
 
-  dropItDown(){
+  toggle(){
     this.clicked = !this.clicked;
   }
 }

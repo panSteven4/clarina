@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  clicked: boolean = false;
+  isDropped: boolean = false;
 
-  dropItDown() {
-    this.clicked = !this.clicked;
+  toggle() {
+    this.isDropped = !this.isDropped;
   }
 }

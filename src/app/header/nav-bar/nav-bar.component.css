@@ -51,6 +51,10 @@ a {
     flex-direction: column;
 }
 
+.hidden {
+    display: none;
+}
+
 .col:hover {
     background-color: white;
 }
