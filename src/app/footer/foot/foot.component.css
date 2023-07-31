@@ -2,9 +2,13 @@
   background-color: #F2F2F2;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  justify-content: space-evenly;
+  padding: 35px;
+}
+
+.container-item {
+  width: 200px;
+  padding: 10px;
 }
 
 .methods {
