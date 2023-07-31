@@ -18,7 +18,8 @@
 
 .num  {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
     padding: 10px;
     color: #604e51;
@@ -28,7 +29,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .animation-item-item {
@@ -45,18 +46,42 @@
     font-size: 22px;
 }
 
-.vice-btn {
+.more-btn {
     color: white;
     display: flex;
     align-items: center;
-    font-size: 22px;
+    font-size: 19px;
+    border: 1px solid var(--main-background);
+    border-radius: 50px;
+    padding: 10px 15px;
 }
 
 .btn-arrow {
     color: #CE053F;
 }
 
+.num-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--main-red);
+  background-color: white;
+}
 
+.num-btn:hover {
+  cursor: pointer;
+  background-color: var(--main-red);
+  color: white;
+}
+
+.more-btn:hover {
+  background-color: var(--main-red);
+  border-color: var(--main-red);
+}
+
+.more-btn:hover > .btn-arrow {
+  color: white;
+}
 
 
 @media (max-width: 991px) {
