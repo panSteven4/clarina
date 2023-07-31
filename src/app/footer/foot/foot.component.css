@@ -1,0 +1,58 @@
+.container {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.methods {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+
+.title {
+  padding-bottom: 15px;
+  color: var(--main-red);
+  font-size: 20px;
+}
+
+.social-img {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.fb:hover {
+  background-image: linear-gradient(#1195F5, darkblue);
+}
+
+.ig:hover {
+  background-image: linear-gradient(blue, rebeccapurple, purple, red, orange, yellow);
+}
+
+.arrow-right {
+  color: var(--main-red);
+  font-size: 12px;
+}
+
+li {
+  display:flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style:none;
+}
+
+li:hover {
+  color: var(--main-red);
+  cursor: pointer;
+}
+
