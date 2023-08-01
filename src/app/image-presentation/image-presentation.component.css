@@ -66,6 +66,9 @@
   border-radius: 50%;
   border: 1px solid var(--main-red);
   background-color: white;
+  color: var(--main-red);
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .num-btn:hover {
