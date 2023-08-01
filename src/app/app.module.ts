@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MessageComponent } from './footer/message/message.component';
 import { ContactComponent } from './footer/contact/contact.component';
 import { FootComponent } from './footer/foot/foot.component';
+import {ProductGeneratorService} from "./services/product-generator.service";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { FootComponent } from './footer/foot/foot.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductGeneratorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

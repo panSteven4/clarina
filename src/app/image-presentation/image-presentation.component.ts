@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Category} from "./category.model";
+import {Category} from "../models/category.model";
 
 @Component({
   selector: 'app-image-presentation',

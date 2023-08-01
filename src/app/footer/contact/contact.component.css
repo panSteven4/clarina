@@ -92,3 +92,13 @@ table th, table td {
   }
 }
 
+/*TODO po fotbálku*/
+/*@media screen and (max-width: 800px){*/
+/*  .container{*/
+/*    flex-direction: column;*/
+/*  }*/
+
+/*  .contact {*/
+/*    border: none;*/
+/*  }*/
+/*}*/
