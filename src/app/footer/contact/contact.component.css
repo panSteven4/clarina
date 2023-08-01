@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  background-color: #AE1D39;
+  color: white;
+}
+
+.map {
+  padding: 0px;
+}
+
+.map-img {
+  height: 100%;
+}
+
+.contact {
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 25px;
+  border-right: 1px solid black;
+}
+
+.contact-info {
+  line-height: 22px;
+}
+
+.email {
+  text-align: center;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.email-input-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.input-email {
+  background-color: var(--main-background);
+  padding: 9px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.email-btn {
+  display:flex;
+  background-color: white;
+  padding: 13px;
+  border-radius: 50%;
+  position:absolute;
+  right: 0;
+  aspect-ratio: 1;
+
+}
+
+.orders {
+  line-height: 22px
+}
+
+h3 {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 24px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+table th, table td {
+  padding: 12px 15px;
+}
+
+.email-btn:hover{
+  color: var(--main-red);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1270px){
+  .map {
+    display:none;
+  }
+}
+
