@@ -1,13 +1,77 @@
 .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 340px;
   width: 250px;
-  padding: 10px 20px;
+  text-align: center;
+}
+
+.row {
+  display: block;
+  width: 100%;
+  line-height: 1.22;
 }
 
 .row img {
-    max-width: 190px;
-    max-height: 200px;
+  max-width: 190px;
+  max-height: 200px;
+  margin:auto;
 }
+
+.title {
+  padding-bottom: 20px;
+  padding-top: 5px;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 17px;
+  color: black;
+}
+
+.title:hover{
+  color: var(--main-red);
+}
+
+.anchor-cont {
+  text-decoration: none;
+}
+
+.anchor-cont:hover {
+  cursor: pointer;
+}
+
+.cart-btn {
+  font-weight: bold;
+  color: var(--main-red);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border: 1px solid var(--main-red);
+  border-radius: 40px;
+  padding: 6px 15px;
+  margin: auto;
+}
+
+.cart-btn:hover {
+  color: white;
+  background-color: var(--main-red);
+  cursor: pointer;
+}
+
+
+
+.space-right {
+  padding-right: 12px;
+}
+
+.available-true {
+  padding-top: 10px;
+  color: green;
+}
+
+.available-false {
+  padding-top: 10px;
+  color: var(--main-red);
+
+}
+

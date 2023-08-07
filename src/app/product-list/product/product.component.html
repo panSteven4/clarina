@@ -1,19 +1,23 @@
-<div *ngIf="product" class="col">
-    <div class="row img">
-        <img src="{{product.image_path}}" alt="clarinet-buffet crampon">
-    </div>
-    <div class="row">
-        <h4>{{product.name}}</h4>
-    </div>
-    <div class="row">
-        <button>{{product.price}} vč. DPH</button>
-    </div>
-    <div *ngIf="product.available" class="row">
-        skladem
-    </div>
-    <div *ngIf="!product.available" class="row">
-        není skladem
-    </div>
-</div>
-
+<a class="anchor-cont">
+  <div *ngIf="product" class="col">
+      <div class="row img">
+          <img src="{{product.image_path}}" alt="clarinet-buffet crampon">
+      </div>
+      <div class="row title">
+          {{product.name}}
+      </div>
+      <div class="row">
+        <button class="cart-btn">
+          <span class="space-right">{{product.price}} vč. DPH</span>
+          <span class="material-symbols-outlined">shopping_cart</span>
+        </button>
+      </div>
+      <div *ngIf="product.available" class="row available-true">
+          skladem
+      </div>
+      <div *ngIf="!product.available" class="row available-false">
+          na dotaz
+      </div>
+  </div>
+</a>
 
