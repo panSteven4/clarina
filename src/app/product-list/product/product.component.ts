@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {ProductGeneratorService} from "../../services/product-generator.service";
+import { Component, Input } from '@angular/core';
+import {ProductModel} from "../../models/product.model";
+
 
 @Component({
   selector: 'app-product',
@@ -7,8 +8,7 @@ import {ProductGeneratorService} from "../../services/product-generator.service"
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  constructor(private ProductGeneratorService: ProductGeneratorService) {
-
-  }
+  @Input() product: ProductModel|undefined;
+  constructor() {}
 
 }

@@ -1,3 +1,5 @@
-<p>product-list works!</p>
-<button>asdfsadfsadf</button>
-<app-product></app-product>
+<div class="container">
+  <div *ngFor="let product of products" class="grid-item">
+    <app-product [product] = product></app-product>
+  </div>
+</div>

@@ -1,16 +1,19 @@
-<div class="col">
+<div *ngIf="product" class="col">
     <div class="row img">
-        <img src="https://www.clarina.cz/data/imgauto/2/0/Buffet%20hoboj%20Prodige%20Simplifi%C3%A9%20BC4030-2-0.jpg" alt="clarinet-buffet crampon">
+        <img src="{{product.image_path}}" alt="clarinet-buffet crampon">
     </div>
     <div class="row">
-        <h4>Buffet Crampon PRODIGE Simplified</h4>
+        <h4>{{product.name}}</h4>
     </div>
     <div class="row">
-        <button>47 890 Kč vč. DPH</button>
+        <button>{{product.price}} vč. DPH</button>
     </div>
-    <div class="row">
-        na dotaz
+    <div *ngIf="product.available" class="row">
+        skladem
+    </div>
+    <div *ngIf="!product.available" class="row">
+        není skladem
     </div>
 </div>
-    
+
 

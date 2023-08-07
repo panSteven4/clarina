@@ -5,7 +5,7 @@ import {ProductModel} from "../models/product.model";
   providedIn: 'root'
 })
 export class ProductGeneratorService {
-  products: ProductModel[] = [];
+  // products: ProductModel[] = [];
   imagePaths: string[] = [
     "assets/instruments/1.jpg",
     "assets/instruments/2.jpg",
@@ -13,14 +13,14 @@ export class ProductGeneratorService {
     "assets/instruments/4.jpg",
     "assets/instruments/5.jpg",
     "assets/instruments/6.jpg",
-    "assets/instruments/7.jpg",
+    "assets/instruments/7.png",
     "assets/instruments/8.jpg",
     "assets/instruments/9.jpg",
     "assets/instruments/10.jpg",
     "assets/instruments/11.jpg",
     "assets/instruments/12.jpg",
     "assets/instruments/13.jpg",
-    "assets/instruments/14.jpg",
+    "assets/instruments/14.png",
     "assets/instruments/15.jpg",
     "assets/instruments/16.jpg",
     "assets/instruments/17.jpg",
@@ -49,10 +49,10 @@ export class ProductGeneratorService {
   ]
 
   constructor() {
-    for(let i = 0; i<100; i++){
-      this.products.push(this.generateProduct())
-    }
-    console.log(this.products);
+    // for(let i = 0; i<100; i++){
+    //   this.products.push(this.generateProduct())
+    // }
+    // console.log(this.products);
   }
   generateProduct(): ProductModel{
     return {
