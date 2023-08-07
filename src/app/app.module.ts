@@ -10,10 +10,20 @@ import { ImagePresentationComponent } from './image-presentation/image-presentat
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product-list/product/product.component';
 import { FooterComponent } from './footer/footer.component';
-import { MessageComponent } from './footer/message/message.component';
+import { MessageComponent } from './message/message.component';
 import { ContactComponent } from './footer/contact/contact.component';
 import { FootComponent } from './footer/foot/foot.component';
 import {ProductGeneratorService} from "./services/product-generator.service";
+import { HomepageComponent } from './views/homepage/homepage.component';
+import { KatalogComponent } from './views/katalog/katalog.component';
+import { DechyComponent } from './views/katalog/dechy/dechy.component';
+import { SmycceComponent } from './views/katalog/smycce/smycce.component';
+import { StrunneComponent } from './views/katalog/strunne/strunne.component';
+import { KlavesoveComponent } from './views/katalog/klavesove/klavesove.component';
+import { BiciComponent } from './views/katalog/bici/bici.component';
+import { NotyComponent } from './views/katalog/noty/noty.component';
+import { DarkyComponent } from './views/katalog/darky/darky.component';
+import { PrislusenstviComponent } from './views/katalog/prislusenstvi/prislusenstvi.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +37,17 @@ import {ProductGeneratorService} from "./services/product-generator.service";
     FooterComponent,
     MessageComponent,
     ContactComponent,
-    FootComponent
+    FootComponent,
+    HomepageComponent,
+    KatalogComponent,
+    DechyComponent,
+    SmycceComponent,
+    StrunneComponent,
+    KlavesoveComponent,
+    BiciComponent,
+    NotyComponent,
+    DarkyComponent,
+    PrislusenstviComponent
   ],
   imports: [
     BrowserModule,
