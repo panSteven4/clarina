@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./head.component.css']
 })
 export class HeadComponent {
-  clicked: boolean = false;
+  isDropped: boolean = false;
 
   toggle(){
-    this.clicked = !this.clicked;
+    this.isDropped = !this.isDropped;
   }
 }

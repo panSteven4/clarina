@@ -3,7 +3,7 @@
         <a href="#"><img src="/assets/logo.png" alt="clarinalogo" class="logo-img"></a>
     </div>
     <div class="col">
-        <a href="#" class="center-vertical registrace">
+        <a href="#" class="center-vertical registration">
             <span class="material-symbols-outlined">
                 person_add
             </span>
@@ -43,11 +43,14 @@
             <span>
                 CZ
             </span>
-            <span class="material-symbols-outlined">
+            <span *ngIf="!isDropped" class="material-symbols-outlined">
                 arrow_drop_down
             </span>
+            <span *ngIf="isDropped" class="material-symbols-outlined">
+                arrow_drop_up
+            </span>
         </button>
-        <div class="dropdown-content" [ngClass]="{hidden: !clicked}">
+        <div class="dropdown-content" [ngClass]="{hidden: !isDropped}">
             <a href="#">Česky</a>
             <a href="#">Slovensky</a>
             <a href="#">Německy</a>

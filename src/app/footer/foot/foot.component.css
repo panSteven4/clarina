@@ -34,10 +34,12 @@
 
 .fb:hover {
   background-image: linear-gradient(#1195F5, darkblue);
+  cursor: pointer;
 }
 
 .ig:hover {
   background-image: linear-gradient(blue, rebeccapurple, purple, red, orange, yellow);
+  cursor: pointer;
 }
 
 .arrow-right {

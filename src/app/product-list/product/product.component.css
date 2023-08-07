@@ -13,6 +13,11 @@
   line-height: 1.22;
 }
 
+.img {
+  height: 215px;
+  width: 250px;
+}
+
 .row img {
   max-width: 190px;
   max-height: 200px;
