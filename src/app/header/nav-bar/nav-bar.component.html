@@ -27,7 +27,7 @@
     <!-- @media (max-width: 991px) -->
     <div class="kategorie-container">
         <button class="kategorie" (click)="toggle()">
-            <span class="material-symbols-outlined kategorie-img">
+            <span class="material-symbols-outlined kategorie-img" [ngClass]="{changeColor: isDropped}">
                 menu
             </span>
             <span>
@@ -35,15 +35,15 @@
             </span>
         </button>
         <div [ngClass]="{hidden: !isDropped}" class="dropdown-content">
-            <a class="icon-flex"><img src="assets/menu_dechove.png" alt="dech" class="img">DECHOVÉ NÁSTROJE</a>
-            <a class="icon-flex"><img src="assets/menu_smyccove.png" alt="smyčec" class="img">SMYČCOVÉ NÁSTROJE</a>
-            <a class="icon-flex"><img src="assets/menu_strune-drnkaci.png" alt="strunné" class="img">STRUNNÉ A DRNKACÍ NÁSTROJE</a>
-            <a class="icon-flex"><img src="assets/menu_klavesove.png" alt="klaves" class="img">KLÁVESOVÉ NÁSTROJE</a>
-            <a class="icon-flex"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
-            <a class="icon-flex"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
-            <a class="icon-flex"><img src="assets/menu_noty.png" alt="noty" class="img">NOTY PRO HUDEBNÍ NÁSTROJE</a>
-            <a class="icon-flex"><img src="assets/menu_darky.png" alt="darkove" class="img">DÁRKOVÉ ZBOŽÍ</a>
-            <a class="icon-flex">PŘÍSLUŠENSTVÍ</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_dechove.png" alt="dech" class="img"></span>DECHOVÉ NÁSTROJE</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_smyccove.png" alt="smyčec" class="img"></span>SMYČCOVÉ NÁSTROJE</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_strune-drnkaci.png" alt="strunné" class="img"></span>STRUNNÉ A DRNKACÍ NÁSTROJE</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_klavesove.png" alt="klaves" class="img"></span>KLÁVESOVÉ NÁSTROJE</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img"></span>KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img"></span>KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_noty.png" alt="noty" class="img"></span>NOTY PRO HUDEBNÍ NÁSTROJE</a>
+            <a class="icon-flex"><span class="img-spacearound"><img src="assets/menu_darky.png" alt="darkove" class="img"></span>DÁRKOVÉ ZBOŽÍ</a>
+            <a class="icon-flex"><span class="img-spacearound"></span>PŘÍSLUŠENSTVÍ</a>
         </div>
     </div>
 </div>

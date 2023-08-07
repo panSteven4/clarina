@@ -10,23 +10,23 @@
     <div class="number-box">
         <div class="num">
             <h4>CLARINA MUSIC</h4>
-            <button (click)=setCategory(0) class="num-btn">1</button>
+            <button (click)=setCategory(0) class="num-btn" [ngClass]="{highlightButton: currentCategory==0}">1</button>
         </div>
         <div class="num">
             <h4>Koncertní nástroje</h4>
-            <button (click)=setCategory(1) class="num-btn">2</button>
+            <button (click)=setCategory(1) class="num-btn" [ngClass]="{highlightButton: currentCategory==1}">2</button>
         </div>
         <div class="num">
             <h4>Příslušenství a noty</h4>
-            <button (click)=setCategory(2) class="num-btn">3</button>
+            <button (click)=setCategory(2) class="num-btn" [ngClass]="{highlightButton: currentCategory==2}">3</button>
         </div>
         <div class="num">
             <h4>Nová prodejna v Bratislavě</h4>
-            <button (click)="setCategory(3)" class="num-btn">4</button>
+            <button (click)="setCategory(3)" class="num-btn" [ngClass]="{highlightButton: currentCategory==3}">4</button>
         </div>
         <div class="num">
             <h4>Změna otevírací doby</h4>
-            <button (click)="setCategory(4)" class="num-btn">5</button>
+            <button (click)="setCategory(4)" class="num-btn" [ngClass]="{highlightButton: currentCategory==4}">5</button>
         </div>
     </div>
 </div>
