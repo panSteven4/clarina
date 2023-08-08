@@ -1,12 +1,7 @@
 <div class="container">
   <div class="row">
     <span class="price">CENA</span>
-    <span data-role="rangeslider">
-      <label for="price-min">Price:</label>
-      <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-      <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
-      <label for="price-max">Price:</label>
-    </span>
+    <input type="range" name="" id="">
     <div class="dropdown-btn-container">
       <button class="available-button" (click)="toggle()">
         <span>
@@ -59,7 +54,8 @@
     <span class="show-link"><a>Od nejdražšího</a></span>
   </div>
   <hr>
-  <div class="row">
+  <div class="row number-page-container">
+<!--this will be later done using *ngFor, typescript and directives, but now there are no data for that-->
     <a>Předchozí</a>
     <a>1</a>
     <a>2</a>

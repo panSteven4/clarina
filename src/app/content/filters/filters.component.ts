@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FiltersComponent {
   isDropped = false;
+  minValue = 0;
+  maxValue = 1300000;
 
   toggle() {
     this.isDropped = !this.isDropped;
