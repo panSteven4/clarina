@@ -15,17 +15,18 @@ import { ContactComponent } from './footer/contact/contact.component';
 import { FootComponent } from './footer/foot/foot.component';
 import {ProductGeneratorService} from "./services/product-generator.service";
 import { HomepageComponent } from './views/homepage/homepage.component';
-import { KatalogComponent } from './views/katalog/katalog.component';
-import { DechyComponent } from './views/katalog/dechy/dechy.component';
-import { SmycceComponent } from './views/katalog/smycce/smycce.component';
-import { StrunneComponent } from './views/katalog/strunne/strunne.component';
-import { KlavesoveComponent } from './views/katalog/klavesove/klavesove.component';
-import { BiciComponent } from './views/katalog/bici/bici.component';
-import { NotyComponent } from './views/katalog/noty/noty.component';
-import { DarkyComponent } from './views/katalog/darky/darky.component';
-import { PrislusenstviComponent } from './views/katalog/prislusenstvi/prislusenstvi.component';
+import { KatalogComponent } from './views/katalog-dummy/katalog/katalog.component';
+import { DechyComponent } from './views/katalog-dummy/katalog/dechy/dechy.component';
+import { SmycceComponent } from './views/katalog-dummy/katalog/smycce/smycce.component';
+import { StrunneComponent } from './views/katalog-dummy/katalog/strunne/strunne.component';
+import { KlavesoveComponent } from './views/katalog-dummy/katalog/klavesove/klavesove.component';
+import { BiciComponent } from './views/katalog-dummy/katalog/bici/bici.component';
+import { NotyComponent } from './views/katalog-dummy/katalog/noty/noty.component';
+import { DarkyComponent } from './views/katalog-dummy/katalog/darky/darky.component';
+import { PrislusenstviComponent } from './views/katalog-dummy/katalog/prislusenstvi/prislusenstvi.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { FiltersComponent } from './content/filters/filters.component';
+import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { FiltersComponent } from './content/filters/filters.component';
     PrislusenstviComponent,
     NotFoundComponent,
     FiltersComponent,
+    KatalogDummyComponent,
   ],
   imports: [
     BrowserModule,
