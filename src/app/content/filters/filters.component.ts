@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent {
+  isDropped = false;
+
+  toggle() {
+    this.isDropped = !this.isDropped;
+  }
 
 }

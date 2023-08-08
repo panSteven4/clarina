@@ -1,7 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  width: 840px;
+  margin: auto;
 }
 
 .row {
@@ -116,3 +117,50 @@
 
 }
 /*TODO active class for these links*/
+
+.available-button {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+  font-size: 18px;
+  padding: 5px 5px 3px 13px;
+  border: 1px solid var(--main-red);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.dropdown-btn-container {
+  position: relative;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #eeeaea;
+  z-index: 1;
+  border: 2px solid grey;
+  width: 200px;
+  margin-top: 4px;
+  right: 0;
+}
+
+.dropdown-content a {
+  cursor: pointer;
+  padding: 7px;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.dropdown-content a:last-child {
+  border: 0;
+}
+
+.dropdown-content a:hover {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+}
+
+.hidden {
+  display: none;
+}
+

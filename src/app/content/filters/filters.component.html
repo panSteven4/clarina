@@ -7,7 +7,25 @@
       <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
       <label for="price-max">Price:</label>
     </span>
-    <select>Výrobce</select>
+    <div class="dropdown-btn-container">
+      <button class="available-button" (click)="toggle()">
+        <span>
+          Výrobce
+        </span>
+        <span *ngIf="!isDropped" class="material-symbols-outlined">
+          arrow_drop_down
+        </span>
+        <span *ngIf="isDropped" class="material-symbols-outlined">
+          arrow_drop_up
+        </span>
+      </button>
+      <div class="dropdown-content hidden" [ngClass]="{hidden: !isDropped}"> <!--this will be later done with *ngFor, but now there are no data-->
+        <a>Výrobce uga buga</a>
+        <a>Uga buga s.r.o.</a>
+        <a>Uga buga tvoje volba</a>
+        <a>www.gadžo.cz</a>
+      </div>
+    </div>
   </div>
   <div class="row">
     <label for="action" class="checkbox-label">
