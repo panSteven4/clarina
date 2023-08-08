@@ -19,7 +19,7 @@
 .red-square-checkbox {
   border: 2px solid var(--main-red);
   border-radius: 0;
-  margin-right: 12px;
+  margin-right: 7px;
   color: var(--main-red);
 }
 
@@ -28,6 +28,91 @@
 }
 
 .checkbox-label {
-  margin-right: 25px;
+  margin-right: 30px;
   font-size: 18px;
+  padding-left: 35px;
+  padding-top: 4px;
+
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 2px solid var(--main-red);
+}
+
+.checkbox-label:hover input ~ .checkmark {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-label .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--main-red);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.show {
+  font-size: 22px;
+  padding-right: 30px;
+  font-weight: bold;
+}
+
+.show-link {
+  font-size: 18px;
+  padding-right: 30px;
+}
+
+.show-link a {
+  box-shadow: inset 0 0 0 0 var(--main-red);
+  color: black;
+  margin: 0 -.25rem;
+  padding: 5px 10px;
+  transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+  border-radius: 30px;
+}
+.show-link a:hover {
+  box-shadow: inset 155px 0 0 0 var(--main-red);
+  color: white;
+  cursor: pointer;
+
+}
+/*TODO active class for these links*/

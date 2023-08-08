@@ -13,13 +13,13 @@ a {
     justify-content: space-around;
     background-color: #CE053F;
     align-items: center;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .col {
     border-right: 1px solid black;
     flex-grow: 1;
-    height: 62px;
+    height: 69px;
 }
 
 .last-col {
@@ -29,8 +29,9 @@ a {
 
 .icon-flex {
     display: flex;
-    justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .icon-flex:hover {
@@ -43,6 +44,7 @@ a {
 
 .kategorie-container {
   display: none;
+  width: 100%
 }
 
 .img {
@@ -62,7 +64,7 @@ a {
 .dropdown-content {
     display:flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
 }
 
 .hidden {
@@ -76,10 +78,17 @@ a {
 
 .col:hover {
     background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+
 }
 
 .col:hover > a {
     color: black;
+}
+
+
+.active {
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.5) inset;
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
@@ -107,7 +116,7 @@ a {
         display: flex;
         position: relative;
         align-items: center;
-        font-size: 14px;
+        font-size: 15px;
         color: white;
         margin-top: 9px;
         margin-bottom: 9px;
