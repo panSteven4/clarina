@@ -9,6 +9,7 @@ import {NotyComponent} from "./views/katalog/noty/noty.component";
 import {PrislusenstviComponent} from "./views/katalog/prislusenstvi/prislusenstvi.component";
 import {SmycceComponent} from "./views/katalog/smycce/smycce.component";
 import {StrunneComponent} from "./views/katalog/strunne/strunne.component";
+import {NotFoundComponent} from "./views/not-found/not-found.component";
 
 const routes: Routes = [
   {path: "", component: HomepageComponent},
@@ -25,7 +26,9 @@ const routes: Routes = [
       {path: "smycce", component: SmycceComponent},
       {path: "strunne", component: StrunneComponent},
     ]
-  }
+  },
+
+  {path: "**", component: NotFoundComponent} // has to be last in Routes
 ];
 
 @NgModule({

@@ -7,10 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { HeadComponent } from './header/head/head.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { ImagePresentationComponent } from './image-presentation/image-presentation.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductComponent } from './product-list/product/product.component';
+import { ProductListComponent } from './content/product-list/product-list.component';
+import { ProductComponent } from './content/product-list/product/product.component';
 import { FooterComponent } from './footer/footer.component';
-import { MessageComponent } from './message/message.component';
+import { MessageComponent } from './content/message/message.component';
 import { ContactComponent } from './footer/contact/contact.component';
 import { FootComponent } from './footer/foot/foot.component';
 import {ProductGeneratorService} from "./services/product-generator.service";
@@ -24,6 +24,8 @@ import { BiciComponent } from './views/katalog/bici/bici.component';
 import { NotyComponent } from './views/katalog/noty/noty.component';
 import { DarkyComponent } from './views/katalog/darky/darky.component';
 import { PrislusenstviComponent } from './views/katalog/prislusenstvi/prislusenstvi.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
+import { FiltersComponent } from './content/filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { PrislusenstviComponent } from './views/katalog/prislusenstvi/prislusens
     BiciComponent,
     NotyComponent,
     DarkyComponent,
-    PrislusenstviComponent
+    PrislusenstviComponent,
+    NotFoundComponent,
+    FiltersComponent,
   ],
   imports: [
     BrowserModule,
