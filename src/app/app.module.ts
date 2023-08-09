@@ -28,6 +28,7 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 import { FiltersComponent } from './content/filters/filters.component';
 import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.component';
 import {FormsModule} from "@angular/forms";
+import { RegistrationComponent } from './views/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import {FormsModule} from "@angular/forms";
     NotFoundComponent,
     FiltersComponent,
     KatalogDummyComponent,
+    RegistrationComponent,
   ],
     imports: [
         BrowserModule,

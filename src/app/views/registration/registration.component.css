@@ -1,0 +1,47 @@
+.container {
+  width: 1140px;
+  margin: auto;
+  color: #444444;
+}
+h1 {
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+  color: var(--main-red);
+}
+input {
+  border: 1px solid rgba(68, 68, 68, 0.63);
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+.group-header {
+  display: block;
+  font-size: 18px;
+  padding: 15px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 940px;
+ }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+/*TODO*/
+}
+
+

@@ -23,7 +23,7 @@
 }
 
 .field-one {
-  width: 100px;
+  width: 80px;
   text-align: right;
 }
 
@@ -34,11 +34,6 @@
 .price-slider {
   display: flex;
   align-items: center;
-}
-
-.price-slider .field {
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 .slider {
@@ -56,8 +51,8 @@
   border-radius: 5px;
   background-color: var(--main-red);
   position: absolute;
-  left: 25%;
-  right: 25%;
+  left: 0;
+  right: 0;
 }
 
 .range-input {
@@ -249,4 +244,9 @@ input[type="range"]::-webkit-slider-thumb{
   color: black;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 840px) {
+/*  TODO*/
+}
+
 

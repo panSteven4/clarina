@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row">
     <span class="title price">Cena:</span>
-    <div class="field field-one">
-      <span class="min-price">{{minValue}} Kč</span>
-    </div>
     <div class="price-slider">
+      <div class="field field-one">
+        <span class="min-price">{{minValue}} Kč</span>
+      </div>
       <div class="slider">
-        <div class="progress"></div>
+        <div class="progress" [ngStyle]="sliderClass"></div>
       </div>
       <div class="range-input">
-        <input type="range" [(ngModel)]="minValue" class="range-min" min="0" max="300000"> <!--TODO, but i dont know how :dd-->
-        <input type="range" [(ngModel)]="maxValue" class="range-max" min="0" max="300000">
+        <input type="range" [(ngModel)]="minValue" (ngModelChange)="prettifySliderLeft()" class="range-min" min="0" max="300000">
+        <input type="range" [(ngModel)]="maxValue" (ngModelChange)="prettifySliderRight()" class="range-max" min="0" max="300000">
       </div>
       <div class="field field-two">
         <span class="max-price">{{maxValue}} Kč</span>
@@ -36,6 +36,7 @@
       </div>
     </div>
   </div>
+  <hr>
   <div class="row">
     <span class="title">Filtry:</span>
     <label for="action" class="checkbox-label">

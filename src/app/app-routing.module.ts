@@ -12,9 +12,11 @@ import {StrunneComponent} from "./views/katalog-dummy/katalog/strunne/strunne.co
 import {NotFoundComponent} from "./views/not-found/not-found.component";
 import {KatalogDummyComponent} from "./views/katalog-dummy/katalog-dummy.component";
 import {DechyComponent} from "./views/katalog-dummy/katalog/dechy/dechy.component";
+import {RegistrationComponent} from "./views/registration/registration.component";
 
 const routes: Routes = [
   {path: "", component: HomepageComponent},
+  {path: "registrace", component: RegistrationComponent},
   {
     path: "katalog",
     component: KatalogDummyComponent,
