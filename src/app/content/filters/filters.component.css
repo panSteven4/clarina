@@ -12,10 +12,76 @@
   padding: 20px;
 }
 
-.price {
+.title {
   font-size: 22px;
-  padding-right: 30px;
+  margin-right: 20px;
   font-weight: bold;
+}
+
+.price {
+  margin-right: 0px;
+}
+
+.field-one {
+  width: 100px;
+  text-align: right;
+}
+
+.field-two {
+  width: 100px;
+}
+
+.price-slider {
+  display: flex;
+  align-items: center;
+}
+
+.price-slider .field {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.slider {
+  height: 5px;
+  width: 300px;
+  background-color: #ddd;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.slider .progress {
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--main-red);
+  position: absolute;
+  left: 25%;
+  right: 25%;
+}
+
+.range-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.range-input input {
+  position: absolute;
+  left: -310px;
+  width: 300px;
+  -webkit-appearance: none;
+  background: none;
+  pointer-events: none;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  height: 17px;
+  width: 17px;
+  -webkit-appearance: none;
+  background: var(--main-red);
+  border-radius: 50%;
+  pointer-events: auto;
 }
 
 .red-square-checkbox {
@@ -122,7 +188,7 @@
 .available-button {
   display: flex;
   align-items: center;
-  margin-left: 35px;
+  margin-left: 0;
   font-size: 18px;
   padding: 5px 5px 3px 13px;
   border: 1px solid var(--main-red);
@@ -181,5 +247,6 @@
 .number-page-container a:hover {
   background-color: #dcdcdc;
   color: black;
+  cursor: pointer;
 }
 

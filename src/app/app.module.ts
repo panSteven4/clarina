@@ -27,6 +27,7 @@ import { PrislusenstviComponent } from './views/katalog-dummy/katalog/prislusens
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { FiltersComponent } from './content/filters/filters.component';
 import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -55,10 +56,11 @@ import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.compo
     FiltersComponent,
     KatalogDummyComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [ProductGeneratorService],
   bootstrap: [AppComponent]
 })
