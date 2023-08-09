@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
+  isDroppedFirm = false;
+  isDroppedAddress = false;
+  toggleFirm(){
+    this.isDroppedFirm = !this.isDroppedFirm;
+  }
+
+  toggleAddress() {
+    this.isDroppedAddress = !this.isDroppedAddress;
+  }
 
 }

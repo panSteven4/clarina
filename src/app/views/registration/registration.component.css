@@ -10,8 +10,9 @@ h1 {
 }
 input {
   border: 1px solid rgba(68, 68, 68, 0.63);
-  padding: 5px 8px;
+  padding: 7px 10px;
   border-radius: 4px;
+  float: right;
 }
 .group-header {
   display: block;
@@ -23,6 +24,66 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+label {
+  position: absolute;
+  right: 220px;
+  top: 7px;
+}
+
+.row {
+  position: relative;
+  width: 380px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.group-header {
+  display: flex;
+  align-items:center;
+}
+
+.submit-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  background-color: #45BD0A;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.btn-checkmark {
+  background-color: #338D07;
+  margin-right: 15px;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.submit-btn-text {
+  padding-right: 13px;
+}
+
+.submit-btn:hover {
+  background-color: #338D07;
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (max-width: 1200px) {

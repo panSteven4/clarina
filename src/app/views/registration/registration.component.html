@@ -1,7 +1,6 @@
 <app-header></app-header>
-<div class="container">
+<form class="container">
   <h1>Registrace</h1>
-
   <div class="group">
     <span class="group-header">
       Přihlašovací údaje
@@ -31,14 +30,40 @@
   </div>
 
   <div class="group">
-    <span class="group-header">
-      <span class="material-symbols-outlined">arrow_drop_down</span>Údaje o firmě
-    </span>
-    <span>
-      Vyplňtě v případě, že jste firma
-    </span>
+    <div class="dropdown-header" (click)="toggleFirm()">
+      <span class="group-header">
+        <span class="material-symbols-outlined"  [ngClass]="{hidden: isDroppedFirm}">arrow_drop_down</span>
+        <span class="material-symbols-outlined"  [ngClass]="{hidden: !isDroppedFirm}">arrow_drop_up</span>
+        Údaje o firmě
+      </span>
+
+      <span>
+        Vyplňtě v případě, že jste firma
+      </span>
+    </div>
     <hr>
-    <div class="dropdown-container"> <!--TODO dropdown menu--></div>
+    <div class="dropdown-container" [ngClass]="{hidden: !isDroppedFirm}">
+      <div class="form">
+          <div class="row">
+            <label for="firm-name">
+              Název firmy:
+            </label>
+            <input type="text" id="firm-name">
+          </div>
+          <div class="row">
+            <label for="ic">
+              IČ:
+            </label>
+            <input type="text" id="ic">
+          </div>
+          <div class="row">
+            <label for="dic">
+              DIČ:
+            </label>
+            <input type="text" id="dic">
+          </div>
+        </div>
+    </div>
   </div>
 
   <div class="group">
@@ -105,16 +130,62 @@
   </div>
 
   <div class="group">
-    <span class="group-header">
-      <span class="material-symbols-outlined">arrow_drop_down</span>Doručovací adresa
-    </span>
-    <span>
-      Vyplňte v případě, že se doručovací adresa liší od kontaktní.
-    </span>
+    <div class="dropdown-header" (click)="toggleAddress()">
+      <span class="group-header">
+        <span class="material-symbols-outlined"  [ngClass]="{hidden: isDroppedAddress}">arrow_drop_down</span>
+        <span class="material-symbols-outlined"  [ngClass]="{hidden: !isDroppedAddress}">arrow_drop_up</span>
+        Doručovací adresa
+      </span>
+       <span>
+        Vyplňte v případě, že se doručovací adresa liší od kontaktní.
+      </span>
+    </div>
+    <hr>
+    <div class="dropdown-container" [ngClass]="{hidden: !isDroppedAddress}">
+      <div class="form">
+        <div class="row">
+          <label for="name-or-firm-name">
+            Jméno a příjmení (popř. firma):
+          </label>
+          <input type="text" id="name-or-firm-name">
+        </div>
+        <div class="row">
+          <label for="street2">
+            Ulice:
+          </label>
+          <input type="text" id="street2">
+        </div>
+        <div class="row">
+          <label for="city2">
+            Město
+          </label>
+          <input type="text" id="city2">
+        </div>
+        <div class="row">
+          <label for="psc2">
+            PSČ:
+          </label>
+          <input type="text" id="psc2">
+        </div>
+        <div class="row">
+          <label for="state2">
+            Stát:
+          </label>
+          <input type="text" id="state2">
+        </div>
+      </div>
+    </div>
   </div>
-  <hr>
+
   <div class="submit-section">
-    <button>Dokončit registraci</button>
+    <button class="submit-btn">
+      <span class="material-symbols-outlined btn-checkmark">
+        check
+      </span>
+      <span class="submit-btn-text">
+        Dokončit registraci
+      </span>
+    </button>
   </div>
-</div>
+</form>
 <app-footer></app-footer>
