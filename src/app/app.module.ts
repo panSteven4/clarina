@@ -27,7 +27,7 @@ import { PrislusenstviComponent } from './views/katalog-dummy/katalog/prislusens
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { FiltersComponent } from './content/filters/filters.component';
 import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RegistrationComponent } from './views/registration/registration.component';
 
 @NgModule({
@@ -61,7 +61,8 @@ import { RegistrationComponent } from './views/registration/registration.compone
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
   providers: [ProductGeneratorService],
   bootstrap: [AppComponent]

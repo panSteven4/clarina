@@ -9,10 +9,11 @@ h1 {
   color: var(--main-red);
 }
 input {
-  border: 1px solid rgba(68, 68, 68, 0.63);
+  border: 1px solid rgba(68, 68, 68, 0.3);
   padding: 7px 10px;
   border-radius: 4px;
   float: right;
+  transition: border-color 0.3s
 }
 .group-header {
   display: block;
@@ -43,6 +44,7 @@ label {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .group-header {
@@ -51,19 +53,21 @@ label {
 }
 
 .submit-section {
-  padding-top: 20px;
-  padding-bottom: 20px;
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .submit-btn {
   background-color: #45BD0A;
   border-radius: 5px;
+  width: 185px;
   cursor: pointer;
   color: white;
   display: flex;
   align-items: center;
+  float: right;
+
 }
 
 .btn-checkmark {
@@ -80,6 +84,29 @@ label {
 
 .submit-btn:hover {
   background-color: #338D07;
+}
+
+select {
+  border: 1px solid rgba(68, 68, 68, 0.3);
+  padding: 7px 10px;
+  border-radius: 4px;
+  float: right;
+  width: 185px;
+  height: 30px;
+}
+
+input:focus {
+  border-color: rgba(68, 68, 68, 0.6);
+}
+
+.custom-select {
+  /* Set initial border color */
+  border: 1px solid #ccc;
+  transition: border-color 0.3s; /* Add a smooth transition effect */
+}
+
+.custom-select:focus {
+  border-color: rgba(68, 68, 68, 0.6)
 }
 
 .hidden {
@@ -101,6 +128,11 @@ label {
 @media only screen and (max-width: 800px) {
   .container {
     width: 100%;
+  }
+
+  .group-header {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 /*TODO*/
 }

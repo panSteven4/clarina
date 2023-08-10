@@ -1,5 +1,5 @@
 <app-header></app-header>
-<form class="container">
+<form class="container" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <h1>Registrace</h1>
   <div class="group">
     <span class="group-header">
@@ -11,22 +11,21 @@
         <label for="login-name">
           Přihlačovací jméno:
         </label>
-        <input type="text" id="login-name">
+        <input type="text" id="login-name" formControlName="nickname">
       </div>
       <div class="row">
         <label for="password">
           Heslo:
         </label>
-        <input type="text" id="password">
+        <input type="text" id="password" formControlName="password">
       </div>
       <div class="row">
         <label for="password-again">
           Heslo znovu:
         </label>
-        <input type="text" id="password-again">
+        <input type="text" id="password-again" formControlName="password_again">
       </div>
     </div>
-
   </div>
 
   <div class="group">
@@ -48,19 +47,19 @@
             <label for="firm-name">
               Název firmy:
             </label>
-            <input type="text" id="firm-name">
+            <input type="text" id="firm-name" formControlName="firm_name">
           </div>
           <div class="row">
             <label for="ic">
               IČ:
             </label>
-            <input type="text" id="ic">
+            <input type="text" id="ic" formControlName="ic">
           </div>
           <div class="row">
             <label for="dic">
               DIČ:
             </label>
-            <input type="text" id="dic">
+            <input type="text" id="dic" formControlName="dic">
           </div>
         </div>
     </div>
@@ -76,55 +75,84 @@
         <label for="title">
           Titul:
         </label>
-        <input type="text" id="title">
+        <input type="text" id="title" formControlName="title">
       </div>
       <div class="row">
         <label for="firstname">
           Jméno:
         </label>
-        <input type="text" id="firstname">
+        <input type="text" id="firstname" formControlName="firstname">
       </div>
       <div class="row">
         <label for="surname">
           Příjmení:
         </label>
-        <input type="text" id="surname">
+        <input type="text" id="surname" formControlName="surname">
       </div>
       <div class="row">
         <label for="email">
           Email:
         </label>
-        <input type="text" id="email">
+        <input type="text" id="email" formControlName="email">
       </div>
       <div class="row">
         <label for="phone">
           Telefon:
         </label>
-        <input type="text" id="phone">
+        <input type="text" id="phone" formControlName="phone_number">
       </div>
       <div class="row">
         <label for="street">
           Ulice
         </label>
-        <input type="text" id="street">
+        <input type="text" id="street" formControlName="street">
       </div>
       <div class="row">
         <label for="city">
           Město
         </label>
-        <input type="text" id="city">
+        <input type="text" id="city" formControlName="city">
       </div>
       <div class="row">
         <label for="psc">
           PSČ:
         </label>
-        <input type="text" id="psc">
+        <input type="text" id="psc" formControlName="psc">
       </div>
       <div class="row">
         <label for="state">
           Stát:
         </label>
-        <input type="text" id="state">
+        <select name="state" id="state" class="custom-select" formControlName="state">
+          <option value="cz" selected="selected">Česká republika</option>
+          <option value="sk" >Slovensko</option>
+          <option value="de" >Německo</option>
+          <option value="be" >Belgie</option>
+          <option value="bg" >Bulharsko</option>
+          <option value="dk" >Dánsko</option>
+          <option value="ee" >Estonsko</option>
+          <option value="fi" >Finsko</option>
+          <option value="fr" >Francie</option>
+          <option value="hr" >Chorvatsko</option>
+          <option value="ie" >Irsko</option>
+          <option value="it" >Itálie</option>
+          <option value="cy" >Kypr</option>
+          <option value="lt" >Litva</option>
+          <option value="lv" >Lotyšsko</option>
+          <option value="lu" >Lucembursko</option>
+          <option value="hu" >Maďarsko</option>
+          <option value="mt" >Malta</option>
+          <option value="nl" >Nizozemsko</option>
+          <option value="pl" >Polsko</option>
+          <option value="pt" >Portugalsko</option>
+          <option value="at" >Rakousko</option>
+          <option value="ro" >Rumunsko</option>
+          <option value="gr" >Řecko</option>
+          <option value="si" >Slovinsko</option>
+          <option value="gb" >Spojené království</option>
+          <option value="es" >Španělsko</option>
+          <option value="se" >Švédsko</option>
+        </select>
       </div>
     </div>
   </div>
@@ -147,45 +175,76 @@
           <label for="name-or-firm-name">
             Jméno a příjmení (popř. firma):
           </label>
-          <input type="text" id="name-or-firm-name">
+          <input type="text" id="name-or-firm-name" formControlName="name_or_firm_name">
         </div>
         <div class="row">
-          <label for="street2">
+          <label for="delivery_street">
             Ulice:
           </label>
-          <input type="text" id="street2">
+          <input type="text" id="delivery_street" formControlName="delivery_street">
         </div>
         <div class="row">
-          <label for="city2">
+          <label for="delivery_city">
             Město
           </label>
-          <input type="text" id="city2">
+          <input type="text" id="delivery_city" formControlName="delivery_city">
         </div>
         <div class="row">
-          <label for="psc2">
+          <label for="delivery_psc">
             PSČ:
           </label>
-          <input type="text" id="psc2">
+          <input type="text" id="delivery_psc" formControlName="delivery_psc">
         </div>
         <div class="row">
-          <label for="state2">
+          <label for="delivery_state">
             Stát:
           </label>
-          <input type="text" id="state2">
+          <select name="state-select-2" id="delivery_state" class="custom-select" formControlName="delivery_state">
+            <option value="cz" selected="selected">Česká republika</option>
+            <option value="sk" >Slovensko</option>
+            <option value="de" >Německo</option>
+            <option value="be" >Belgie</option>
+            <option value="bg" >Bulharsko</option>
+            <option value="dk" >Dánsko</option>
+            <option value="ee" >Estonsko</option>
+            <option value="fi" >Finsko</option>
+            <option value="fr" >Francie</option>
+            <option value="hr" >Chorvatsko</option>
+            <option value="ie" >Irsko</option>
+            <option value="it" >Itálie</option>
+            <option value="cy" >Kypr</option>
+            <option value="lt" >Litva</option>
+            <option value="lv" >Lotyšsko</option>
+            <option value="lu" >Lucembursko</option>
+            <option value="hu" >Maďarsko</option>
+            <option value="mt" >Malta</option>
+            <option value="nl" >Nizozemsko</option>
+            <option value="pl" >Polsko</option>
+            <option value="pt" >Portugalsko</option>
+            <option value="at" >Rakousko</option>
+            <option value="ro" >Rumunsko</option>
+            <option value="gr" >Řecko</option>
+            <option value="si" >Slovinsko</option>
+            <option value="gb" >Spojené království</option>
+            <option value="es" >Španělsko</option>
+            <option value="se" >Švédsko</option>
+          </select>
         </div>
       </div>
     </div>
   </div>
 
   <div class="submit-section">
-    <button class="submit-btn">
-      <span class="material-symbols-outlined btn-checkmark">
-        check
-      </span>
-      <span class="submit-btn-text">
-        Dokončit registraci
-      </span>
-    </button>
+    <div class="row">
+      <button type="submit" [disabled]="!profileForm.valid" class="submit-btn">
+        <span class="material-symbols-outlined btn-checkmark">
+          check
+        </span>
+        <span class="submit-btn-text">
+          Dokončit registraci
+        </span>
+      </button>
+    </div>
   </div>
 </form>
 <app-footer></app-footer>
