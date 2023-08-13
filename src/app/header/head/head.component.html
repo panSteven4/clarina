@@ -13,7 +13,7 @@
         </a>
     </div>
     <div class="col">
-        <a href="#" class="center-vertical login">
+        <a (click)="toggleLoginModal()" class="center-vertical login">
             <span class="material-symbols-outlined">
                 login
             </span>
@@ -57,4 +57,44 @@
         </div>
     </div>
 </div>
+<!--MODAL LOGIN WINDOW-->
+<div class="modal" [ngClass]="{modalWindowActive: isVisibleLogin}">
+  <div class="modal-container">
+    <button class="close-button" (click)="isVisibleLogin=false">
+        <span class="material-symbols-outlined">
+          close
+        </span>
+    </button>
+    <hr>
+    <span class="modal-title">
+      Přihlásit
+    </span>
+    <form class="modal-body">
+      <div class="row">
+        <label for="name">Přihlašovací jméno:</label>
+        <input type="text" id="name">
+      </div>
+      <div class="row">
+        <label for="password">Heslo:</label>
+        <input type="text" id="password">
+      </div>
+      <div class="row">
+        <button type="submit">Přihlásit</button>
+        <span>Zapomenuté heslo</span>
+      </div>
+  </form>
+  <form>
+      <div class="row">
+        <span class="modal-title">
+          Registrovat
+        </span>
+      </div>
+      <div class="row">
+        <label for="login-name">Přihlašovací jméno:</label>
+        <input type="text" id="login-name">
+      </div>
+  </form>
+  </div>
+</div>
+<div class="overlay" [ngClass]="{modalOverlayActive: isVisibleLogin}" (click)="isVisibleLogin=false"></div>
 

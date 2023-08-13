@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeadComponent {
   isDropped: boolean = false;
+  isVisibleLogin: boolean = false;
 
   toggle(){
     this.isDropped = !this.isDropped;
+  }
+
+  toggleLoginModal() {
+    this.isVisibleLogin = true;
   }
 }

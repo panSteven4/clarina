@@ -1,7 +1,6 @@
-export interface Category {
-    name: string;
-    title: string;
-    description: string;
-    imagePath: string;
-    moreButtonLink: string;
+export interface CategoryModel{
+    name: string,
+    imagePath: string,
+    subCategory: string
+
 }

@@ -12,12 +12,18 @@
           <span class="material-symbols-outlined">shopping_cart</span>
         </button>
       </div>
-      <div *ngIf="product.available" class="row available-true">
-          skladem
+
+    <ng-container [ngSwitch]="product.available">
+      <div *ngSwitchCase="ProductAvailabilityEnum.Available">
+        skladem
       </div>
-      <div *ngIf="!product.available" class="row available-false">
-          na dotaz
+      <div *ngSwitchCase="ProductAvailabilityEnum.UnderFive">
+        < 5ks skladem
       </div>
+      <div *ngSwitchCase="ProductAvailabilityEnum.Inquiry">
+        na dotaz
+      </div>
+    </ng-container>
   </div>
 </a>
 

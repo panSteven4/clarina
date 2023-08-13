@@ -74,7 +74,7 @@ a {
     right: 4%;
     background-color: white;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -119,6 +119,47 @@ a {
 input:focus::placeholder {
     color:black;
 }
+
+/*MODAL LOGIN WINDOW START*/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 5px;
+  z-index: 10;
+  background-color: white;
+  width: 950px;
+  max-width: 90%;
+}
+
+.modalWindowActive {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+}
+
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+.modalOverlayActive {
+  opacity: 1;
+  pointer-events: all;
+}
+/*MODAL LOGIN WINDOW END*/
+
 
 @media (max-width: 991px) {
     .row {

@@ -27,13 +27,14 @@ input {
   align-items: center;
 }
 label {
-  position: absolute;
-  right: 220px;
-  top: 7px;
+  display: block;
+  text-align: right;
+  width: 160px;
+  margin-right: 30px;
 }
 
 .row {
-  position: relative;
+  display: flex;
   width: 380px;
   margin-top: 30px;
   align-items: center;
@@ -67,7 +68,16 @@ label {
   display: flex;
   align-items: center;
   float: right;
+}
 
+.submit-btn:hover {
+  background-color: #338D07;
+}
+
+
+.submit-btn:disabled  {
+  background-color: rgba(69, 189, 10, 0.40);
+  cursor: default;
 }
 
 .btn-checkmark {
@@ -78,13 +88,15 @@ label {
   border-bottom-left-radius: 5px;
 }
 
+.submit-btn:disabled .btn-checkmark {
+  background-color: rgba(51, 141, 7, 0.3);
+
+}
+
 .submit-btn-text {
   padding-right: 13px;
 }
 
-.submit-btn:hover {
-  background-color: #338D07;
-}
 
 select {
   border: 1px solid rgba(68, 68, 68, 0.3);

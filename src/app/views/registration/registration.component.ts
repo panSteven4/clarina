@@ -43,33 +43,22 @@ export class RegistrationComponent {
   }
 
   onSubmit() {
-    console.log("works!")
   //   TODO - where should I send new profile?
-    let new_profile = {
-        nickname: this.profileForm.value.nickname,
-        password: this.profileForm.value.password,
-        password_again: this.profileForm.value.password_again,
-        firm_name: this.profileForm.value.firm_name,
-        ic: this.profileForm.value.ic,
-        dic: this.profileForm.value.dic,
-        title: this.profileForm.value.title,
-        firstname: this.profileForm.value.firstname,
-        surname: this.profileForm.value.surname,
-        email: this.profileForm.value.email,
-        phone_number: this.profileForm.value.phone_number,
-        street: this.profileForm.value.street,
-        city: this.profileForm.value.city,
-        psc: this.profileForm.value.psc,
-        state: this.profileForm.value.state,
-        name_or_firm_name: this.profileForm.value.name_or_firm_name,
-        delivery_street: this.profileForm.value.delivery_street,
-        delivery_city: this.profileForm.value.delivery_city,
-        delivery_psc: this.profileForm.value.delivery_psc,
-        delivery_state: this.profileForm.value.delivery_state
-    }
-    console.log(new_profile);
+    console.log(this.profileForm);
 
     this.profileForm.reset() // deletes every filled cell in form - resets everything
+  }
+
+  showError(name: string):boolean {
+    if(!this.profileForm){
+      return false
+    }
+    const formsControl = this.profileForm.get(name)
+    if(!formsControl){
+      return false
+    }
+    formsControl.hasValidator(Validators.required)
+    return formsControl.touched && formsControl.invalid;
   }
 
 }

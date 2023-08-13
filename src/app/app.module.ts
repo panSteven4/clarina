@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HeadComponent } from './header/head/head.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
-import { ImagePresentationComponent } from './image-presentation/image-presentation.component';
+import { ImagePresentationComponent } from './content/image-presentation/image-presentation.component';
 import { ProductListComponent } from './content/product-list/product-list.component';
 import { ProductComponent } from './content/product-list/product/product.component';
 import { FooterComponent } from './footer/footer.component';
@@ -29,7 +29,6 @@ import { FiltersComponent } from './content/filters/filters.component';
 import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RegistrationComponent } from './views/registration/registration.component';
-
 @NgModule({
   declarations: [
     AppComponent,

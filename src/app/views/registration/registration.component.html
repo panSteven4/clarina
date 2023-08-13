@@ -11,7 +11,14 @@
         <label for="login-name">
           Přihlačovací jméno:
         </label>
-        <input type="text" id="login-name" formControlName="nickname">
+
+        <div>
+          <input type="text" id="login-name" formControlName="nickname">
+          <div *ngIf="showError('nickname')">
+            Povinná položka
+          </div>
+        </div>
+
       </div>
       <div class="row">
         <label for="password">

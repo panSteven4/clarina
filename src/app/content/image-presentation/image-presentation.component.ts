@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Category} from "../models/category.model";
+import {Cart} from "../../models/cart.model";
 
 @Component({
   selector: 'app-image-presentation',
@@ -9,7 +9,7 @@ import {Category} from "../models/category.model";
 export class ImagePresentationComponent {
   categoryTime: number = 3000;
   timer: ReturnType<typeof setInterval> | undefined;
-  categories: Category[] = [
+  categories: Cart[] = [
     {name: "CLARINA MUSIC", title: "CLARINA MUSIC", description: "Vítejte na stránkách CLARINA MUSIC", moreButtonLink: "", imagePath: ""},
     {name: "Koncertní nástroje", title: "Specialista na koncertní nástroje", description: "Buffet Crampon, Yamaha, Amati, Leblanc, Bach, Adams ...", moreButtonLink: "", imagePath: "assets/slide_preview_bg.jpg"},
     {name: "příslušenství a noty", title: "příslušenství a noty", description: "", moreButtonLink: "", imagePath: "assets/slide_preview_bg.jpg"},
