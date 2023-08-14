@@ -14,13 +14,13 @@
       </div>
 
     <ng-container [ngSwitch]="product.available">
-      <div *ngSwitchCase="ProductAvailabilityEnum.Available">
+      <div *ngSwitchCase="ProductAvailabilityEnum.Available" class="available">
         skladem
       </div>
-      <div *ngSwitchCase="ProductAvailabilityEnum.UnderFive">
+      <div *ngSwitchCase="ProductAvailabilityEnum.UnderFive" class="under-five">
         < 5ks skladem
       </div>
-      <div *ngSwitchCase="ProductAvailabilityEnum.Inquiry">
+      <div *ngSwitchCase="ProductAvailabilityEnum.Inquiry" class="inquiry">
         na dotaz
       </div>
     </ng-container>

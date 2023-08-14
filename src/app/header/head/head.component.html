@@ -59,39 +59,53 @@
 </div>
 <!--MODAL LOGIN WINDOW-->
 <div class="modal" [ngClass]="{modalWindowActive: isVisibleLogin}">
+  <button class="close-button" (click)="isVisibleLogin=false">×</button>
   <div class="modal-container">
-    <button class="close-button" (click)="isVisibleLogin=false">
-        <span class="material-symbols-outlined">
-          close
-        </span>
-    </button>
-    <hr>
-    <span class="modal-title">
-      Přihlásit
-    </span>
-    <form class="modal-body">
-      <div class="row">
+    <div class="modal-empty-top"></div>
+    <hr id="modal-hr-top">
+    <form class="modal-form">
+      <h4 class="modal-title">
+        Přihlásit
+      </h4>
+      <div class="modal-row">
         <label for="name">Přihlašovací jméno:</label>
-        <input type="text" id="name">
+        <input type="text" id="name" class="modal-input-box">
       </div>
-      <div class="row">
+      <div class="modal-row">
         <label for="password">Heslo:</label>
-        <input type="password" id="password">
+        <input type="password" id="password" class="modal-input-box">
       </div>
-      <div class="row">
-        <button type="submit">Přihlásit</button>
-        <span>Zapomenuté heslo</span>
+      <div class="modal-row modal-row-forgotten">
+        <div class="modal-empty-div1"></div>
+        <button type="submit" class="modal-submit-btn">
+          <span class="modal-submit-btn-text">
+            Přihlásit
+          </span>
+          <span class="material-symbols-outlined modal-btn-checkmark">
+            login
+          </span>
+        </button>
+        <a id="modal-forgotten-password">Zapomenuté heslo</a>
       </div>
   </form>
-  <form>
-      <div class="row">
-        <span class="modal-title">
-          Registrovat
-        </span>
-      </div>
-      <div class="row">
+  <form class="modal-form">
+      <h4 class="modal-title">
+        Registrovat
+      </h4>
+      <div class="modal-row">
         <label for="login-name">Přihlašovací jméno:</label>
-        <input type="text" id="login-name">
+        <input type="text" id="login-name" class="modal-input-box">
+      </div>
+      <div class="modal-row">
+        <div class="modal-empty-div2"></div>
+        <button type="submit" class="modal-submit-btn">
+          <span class="modal-submit-btn-text">
+            Registrovat
+          </span>
+          <span class="material-symbols-outlined modal-btn-checkmark">
+            person_add
+          </span>
+        </button>
       </div>
   </form>
   </div>

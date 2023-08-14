@@ -69,14 +69,18 @@
   padding-right: 12px;
 }
 
-.available-true {
-  padding-top: 10px;
-  color: green;
+.available {
+  color: #1d9100;
+  padding-top: 7px;
 }
 
-.available-false {
-  padding-top: 10px;
-  color: var(--main-red);
+.under-five {
+  color: #1d9100;
+  padding-top: 7px;
+}
 
+.inquiry {
+  color: var(--main-red);
+  padding-top: 7px;
 }
 
