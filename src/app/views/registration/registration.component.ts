@@ -25,12 +25,12 @@ export class RegistrationComponent {
     street: ["", Validators.required],
     city: ["", Validators.required],
     psc: ["", Validators.required],
-    state: [""],
+    state: ["cz"],
     name_or_firm_name: [""],
     delivery_street: [""],
     delivery_city: [""],
     delivery_psc: [""],
-    delivery_state: [""]
+    delivery_state: ["cz"]
   })
 
   constructor(private readonly fb: FormBuilder) { }

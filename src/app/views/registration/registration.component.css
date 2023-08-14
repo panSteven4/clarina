@@ -10,10 +10,12 @@ h1 {
 }
 input {
   border: 1px solid rgba(68, 68, 68, 0.3);
-  padding: 7px 10px;
+  padding: 10px 11px;
   border-radius: 4px;
   transition: border-color 0.3s;
   float: right;
+  width: 100%;
+  margin-left: 25px;
 }
 .group-header {
   display: block;
@@ -29,13 +31,12 @@ input {
 label {
   display: block;
   text-align: right;
-  width: 160px;
-  margin-right: 30px;
+  width: 280px;
 }
 
 .row {
   display: flex;
-  width: 380px;
+  width: 550px;
   margin-top: 30px;
   align-items: center;
 }
@@ -101,11 +102,11 @@ label {
 
 select {
   border: 1px solid rgba(68, 68, 68, 0.3);
-  padding: 7px 10px;
+  padding: 10px 11px;
   border-radius: 4px;
   float: right;
-  width: 185px;
-  height: 30px;
+  width: 100%;
+  margin-left: 25px;
 }
 
 input:focus {
@@ -124,12 +125,12 @@ input:focus {
 
 .small-row {
   display: flex;
-  width: 380px;
-  justify-content: center;
+  width: 550px;
+  justify-content: flex-start;
 }
 
 .small-row-invisible-label {
-  width: 160px;
+  width: 238px;
 }
 
 .compulsory-message {
@@ -137,32 +138,59 @@ input:focus {
   font-size: 13px;
   display: flex;
   align-items: center;
-  width: 184px;
   padding: 7px 10px;
 }
 
 .compulsory-cross{
   font-size: 15px;
+  padding-right: 4px;
 }
 
-label::after{
-  content: "*";
+.compulsory-star {
+  padding-left: 3px;
   color: var(--main-red);
+}
+
+.dropdown-container {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  transition: opacity 0.8s, height 0.8s 0.5s;
 }
 
 .hidden {
   display: none;
 }
 
+.showDropdown1 {
+  opacity: 1;
+  height: 190px;
+  transition: opacity 0.8s 0.5s, height 0.8s;
+  pointer-events: all;
+}
+.showDropdown2 {
+  opacity: 1;
+  height: 330px;
+  transition: opacity 0.8s 0.5s, height 0.8s;
+  pointer-events: all;
+}
+
 @media only screen and (max-width: 1200px) {
   .container {
     width: 940px;
  }
+
+  .row {
+    width: 450px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .container {
     width: 720px;
+  }
+  .row {
+    width: 400px;
   }
 }
 
@@ -196,24 +224,35 @@ label::after{
 
   input {
     width: 100%;
+    margin: 0;
   }
 
   label {
     width: 100%;
     text-align: left;
-    margin: 5px 25px;
+    margin: 10px 25px;
     font-size: 15px;
   }
   select {
     width: 100%;
+    margin: 0;
   }
 
   .dropdown-message {
     font-size: 12px;
+    margin-left: 30px;
   }
 
   .group-header {
     font-size: 17px;
+  }
+
+  .showDropdown1 {
+    height: 320px;
+  }
+
+  .showDropdown2 {
+    height: 510px;
   }
 
 }

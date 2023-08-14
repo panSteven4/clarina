@@ -8,7 +8,7 @@ a {
     padding: 10px;
 }
 
-.nav {
+nav {
     display: flex;
     justify-content: space-around;
     background-color: #CE053F;
@@ -107,7 +107,7 @@ a {
         display:none;
     }
 
-    .nav {
+    nav {
         display: flex;
         justify-content: left;
     }
