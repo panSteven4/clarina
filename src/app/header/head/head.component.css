@@ -205,5 +205,10 @@ input:focus::placeholder {
     .shopping {
         background-color: var(--main-background);
     }
+
+    .col {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
 }
 

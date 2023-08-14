@@ -12,8 +12,8 @@ input {
   border: 1px solid rgba(68, 68, 68, 0.3);
   padding: 7px 10px;
   border-radius: 4px;
+  transition: border-color 0.3s;
   float: right;
-  transition: border-color 0.3s
 }
 .group-header {
   display: block;
@@ -56,7 +56,8 @@ label {
 .submit-section {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .submit-btn {
@@ -121,6 +122,34 @@ input:focus {
   border-color: rgba(68, 68, 68, 0.6)
 }
 
+.small-row {
+  display: flex;
+  width: 380px;
+  justify-content: center;
+}
+
+.small-row-invisible-label {
+  width: 160px;
+}
+
+.compulsory-message {
+  color: var(--main-red);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  width: 184px;
+  padding: 7px 10px;
+}
+
+.compulsory-cross{
+  font-size: 15px;
+}
+
+label::after{
+  content: "*";
+  color: var(--main-red);
+}
+
 .hidden {
   display: none;
 }
@@ -139,14 +168,54 @@ input:focus {
 
 @media only screen and (max-width: 800px) {
   .container {
+    width: auto;
+    margin: 20px;
+  }
+
+  h1 {
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+    font-size: 25px;
+  }
+
+  .row{
+    flex-direction: column;
     width: 100%;
   }
 
-  .group-header {
-    padding-left: 20px;
-    padding-right: 20px;
+  .small-row {
+    width: 100%;
+    justify-content: left;
   }
-/*TODO*/
+  .small-row-invisible-label {
+    width: 0;
+  }
+  .compulsory-message {
+    padding: 7px 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+    text-align: left;
+    margin: 5px 25px;
+    font-size: 15px;
+  }
+  select {
+    width: 100%;
+  }
+
+  .dropdown-message {
+    font-size: 12px;
+  }
+
+  .group-header {
+    font-size: 17px;
+  }
+
 }
 
 

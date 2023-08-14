@@ -9,16 +9,16 @@
     <div class="form">
       <div class="row">
         <label for="login-name">
-          Přihlačovací jméno:
+          Přihlašovací jméno:
         </label>
-
-        <div>
-          <input type="text" id="login-name" formControlName="nickname">
-          <div *ngIf="showError('nickname')">
-            Povinná položka
-          </div>
+        <input type="text" id="login-name" formControlName="nickname">
+      </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('nickname')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
         </div>
-
       </div>
       <div class="row">
         <label for="password">
@@ -26,11 +26,25 @@
         </label>
         <input type="text" id="password" formControlName="password">
       </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('password')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
+      </div>
       <div class="row">
         <label for="password-again">
           Heslo znovu:
         </label>
         <input type="text" id="password-again" formControlName="password_again">
+      </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('password_again')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
       </div>
     </div>
   </div>
@@ -43,7 +57,7 @@
         Údaje o firmě
       </span>
 
-      <span>
+      <span class="dropdown-message">
         Vyplňtě v případě, že jste firma
       </span>
     </div>
@@ -90,17 +104,38 @@
         </label>
         <input type="text" id="firstname" formControlName="firstname">
       </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('firstname')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
+      </div>
       <div class="row">
         <label for="surname">
           Příjmení:
         </label>
         <input type="text" id="surname" formControlName="surname">
       </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('surname')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
+      </div>
       <div class="row">
         <label for="email">
           Email:
         </label>
-        <input type="text" id="email" formControlName="email">
+          <input type="text" id="email" formControlName="email">
+      </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('email')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
       </div>
       <div class="row">
         <label for="phone">
@@ -114,17 +149,38 @@
         </label>
         <input type="text" id="street" formControlName="street">
       </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('street')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
+      </div>
       <div class="row">
         <label for="city">
           Město
         </label>
         <input type="text" id="city" formControlName="city">
       </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('city')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
+      </div>
       <div class="row">
         <label for="psc">
           PSČ:
         </label>
         <input type="text" id="psc" formControlName="psc">
+      </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="showError('psc')" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Povinná položka
+        </div>
       </div>
       <div class="row">
         <label for="state">
@@ -171,7 +227,7 @@
         <span class="material-symbols-outlined"  [ngClass]="{hidden: !isDroppedAddress}">arrow_drop_up</span>
         Doručovací adresa
       </span>
-       <span>
+       <span class="dropdown-message">
         Vyplňte v případě, že se doručovací adresa liší od kontaktní.
       </span>
     </div>
@@ -242,16 +298,14 @@
   </div>
 
   <div class="submit-section">
-    <div class="row">
-      <button type="submit" [disabled]="!profileForm.valid" class="submit-btn">
-        <span class="material-symbols-outlined btn-checkmark">
-          check
-        </span>
-        <span class="submit-btn-text">
-          Dokončit registraci
-        </span>
-      </button>
-    </div>
+    <button type="submit" [disabled]="!profileForm.valid" class="submit-btn">
+      <span class="material-symbols-outlined btn-checkmark">
+        check
+      </span>
+      <span class="submit-btn-text">
+        Dokončit registraci
+      </span>
+    </button>
   </div>
 </form>
 <app-footer></app-footer>
