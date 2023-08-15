@@ -32,17 +32,8 @@
   font-size: 17px;
   color: black;
 }
-
-.title:hover{
-  color: var(--main-red);
-}
-
 .anchor-cont {
   text-decoration: none;
-}
-
-.anchor-cont:hover {
-  cursor: pointer;
 }
 
 .cart-btn {
@@ -57,12 +48,19 @@
   margin: auto;
 }
 
-.cart-btn:hover {
+.highlight-btn {
   color: white;
   background-color: var(--main-red);
   cursor: pointer;
 }
 
+.highlight-text {
+  color: var(--main-red);
+}
+
+.pointer {
+  cursor: pointer;
+}
 
 
 .space-right {
