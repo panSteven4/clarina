@@ -158,6 +158,13 @@ input:focus {
   transition: opacity 0.8s, height 0.8s 0.5s;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 .hidden {
   display: none;
 }

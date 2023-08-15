@@ -31,22 +31,6 @@ export class ProductGeneratorService {
     "assets/instruments/22.jpg",
     "assets/instruments/23.jpg"
   ]
-  // private readonly categories: string[] = [
-  //   "Dechové nástroje",
-  //   "Smyčcové nástroje",
-  //   "Strunné a drnkací nástroje",
-  //   "Kláveskové nástroje",
-  //   "Noty pro hudební nástroje",
-  //   "Dřevěné",
-  //   "Žesťové",
-  //   "Struny",
-  //   "Pouzdra",
-  //   "Housle",
-  //   "Kontrabasy",
-  //   "Violy",
-  //   "Klarinety",
-  //   "Klávesy"
-  // ]
 
   private readonly  categories = {
     "Katalog": {

@@ -245,8 +245,15 @@ input[type="range"]::-webkit-slider-thumb{
   cursor: pointer;
 }
 
-@media only screen and (max-width: 840px) {
-/*  TODO*/
+@media only screen and (max-width: 800px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .row > * {
+    margin-top: 15px;
+  }
 }
 
 

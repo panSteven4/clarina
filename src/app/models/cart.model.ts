@@ -1,4 +1,4 @@
-export interface Cart {
+export interface Slide {
     name: string;
     title: string;
     description: string;

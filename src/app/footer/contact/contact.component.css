@@ -2,10 +2,12 @@
   display: flex;
   background-color: #AE1D39;
   color: white;
+  justify-content: center;
 }
 
 .map {
-  padding: 0px;
+ margin-left: -270px;
+ padding-right: 25px;
 }
 
 .map-img {
@@ -13,14 +15,13 @@
 }
 
 .contact {
-  padding-top: 25px;
-  padding-left: 30px;
-  padding-right: 25px;
-  border-right: 1px solid black;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 25px 25px 30px 30px;
 }
 
 .contact-info {
   line-height: 22px;
+  margin: 0 10px;
 }
 
 .email {
@@ -28,6 +29,7 @@
   padding-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
+  min-width: 330px;
 }
 
 .email-input-cont {
@@ -66,15 +68,18 @@ h3 {
   padding-bottom: 15px;
   padding-top: 15px;
   font-size: 24px;
+  padding-left: 10px;
 }
 
 table {
   border-collapse: collapse;
-  margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 400px;
+  min-width: 330px;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table th, table td {
@@ -92,13 +97,31 @@ table th, table td {
   }
 }
 
-/*TODO po fotbálku*/
-/*@media screen and (max-width: 800px){*/
-/*  .container{*/
-/*    flex-direction: column;*/
-/*  }*/
+@media screen and (max-width: 800px){
+  .container{
+    flex-direction: column;
+  }
 
-/*  .contact {*/
-/*    border: none;*/
-/*  }*/
-/*}*/
+  .contact {
+    border-right: unset;
+    padding: unset;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    min-width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .email {
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    min-width: 280px;
+
+  }
+}
