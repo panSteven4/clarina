@@ -246,13 +246,51 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 @media only screen and (max-width: 800px) {
+  .container {
+    width: unset;
+  }
   .row {
     flex-direction: column;
     align-items: flex-start;
+    width: unset;
   }
 
   .row > * {
     margin-top: 15px;
+  }
+
+  .number-page-container {
+    flex-direction: row;
+  }
+
+  .dropdown-content {
+    right: unset;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .slider {
+    width: 200px;
+  }
+
+  .range-input input {
+    width: 200px;
+    left: -210px;
+  }
+
+  .available-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-btn-container {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    left: unset;
+    right: 0;
   }
 }
 
