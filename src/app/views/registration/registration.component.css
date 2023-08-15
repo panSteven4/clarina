@@ -130,7 +130,7 @@ input:focus {
 }
 
 .small-row-invisible-label {
-  width: 238px;
+  width: 186px;
 }
 
 .compulsory-message {
@@ -190,7 +190,12 @@ input:-webkit-autofill:active{
   .row {
     width: 450px;
   }
+
+  .small-row-invisible-label {
+    width: 221px;
+  }
 }
+
 
 @media only screen and (max-width: 1000px) {
   .container {
@@ -198,6 +203,9 @@ input:-webkit-autofill:active{
   }
   .row {
     width: 400px;
+  }
+  .small-row-invisible-label {
+    width: 238px;
   }
 }
 

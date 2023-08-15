@@ -1,4 +1,5 @@
 export interface ProductModel {
+  id: number;
   name: string;
   price: number;
   available: ProductAvailabilityEnum; // na dotaz|skladem|počet ks skladem

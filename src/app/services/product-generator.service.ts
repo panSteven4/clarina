@@ -5,7 +5,7 @@ import {ProductAvailabilityEnum, ProductModel, ProductPricePerEnum} from "../mod
   providedIn: 'root'
 })
 export class ProductGeneratorService {
-  // products: ProductModel[] = [];
+  lastID = 0;
   private readonly imagePaths: string[] = [
     "assets/instruments/1.jpg",
     "assets/instruments/2.jpg",
@@ -630,6 +630,7 @@ export class ProductGeneratorService {
   }
   generateProduct(): ProductModel{
     return {
+      id: this.getID(),
       name: this.getRandomString(10,30),
       price: this.getRandomInt(100, 800000),
       available: this.getRandomItemFromArray([ProductAvailabilityEnum.Available, ProductAvailabilityEnum.Inquiry, ProductAvailabilityEnum.UnderFive]),
@@ -658,6 +659,11 @@ export class ProductGeneratorService {
 
   private getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  private getID(){
+    this.lastID += 1;
+    return this.lastID;
   }
 
   private getRandomBoolean():boolean {
