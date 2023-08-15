@@ -3,42 +3,42 @@
         <a routerLink=""><img src="/assets/logo.png" alt="clarinalogo" class="logo-img"></a>
     </div>
     <div class="col">
-        <a routerLink="/registrace" class="center-vertical registration">
+        <a routerLink="/registrace" class="center-vertical registration margin-sides">
             <span class="material-symbols-outlined">
                 person_add
             </span>
-            <span class="registration-text">
-                Registrace
+            <span class="registration-text text-pad-left">
+              Registrace
             </span>
         </a>
+        <a (click)="toggleLoginModal()" class="center-vertical login margin-sides">
+          <span class="material-symbols-outlined">
+              login
+          </span>
+          <span class="login-text text-pad-left">
+            Přihlášení
+          </span>
+        </a>
     </div>
+
     <div class="col">
-        <a (click)="toggleLoginModal()" class="center-vertical login">
-            <span class="material-symbols-outlined">
-                login
-            </span>
-            <span class="login-text">
-                Přihlášení
-            </span>
-        </a>
-    </div>
-    <div class="col center-vertical search-container">
+      <div class="center-vertical search-container margin-sides">
         <input type="text" name="search-bar" placeholder="Zadejte hledaný výraz" class="search-bar">
         <a href="#" class="search-img-a">
-            <span class="material-symbols-outlined search-img">search</span>
+          <span class="material-symbols-outlined search-img">search</span>
         </a>
-    </div>
-    <a href="#" class="col shopping">
+      </div>
+      <a href="#" class="col shopping margin-sides">
         <div class="center-vertical">
             <span class="material-symbols-outlined circle">
                 shopping_cart
             </span>
-            <span class="cart-text">
+          <span class="cart-text">
                 0 Kč
             </span>
         </div>
-    </a>
-    <div class="col lang-btn-container">
+      </a>
+      <div class="lang-btn-container">
         <button (click)="toggle()" class="lang-btn" >
             <span>
                 CZ
@@ -51,10 +51,19 @@
             </span>
         </button>
         <div class="dropdown-content" [ngClass]="{hidden: !isDropped}">
-            <a>Česky</a>
-            <a>Slovensky</a>
-            <a>Německy</a>
+          <a>Česky</a>
+          <a>Slovensky</a>
+          <a>Německy</a>
         </div>
+      </div>
+    </div>
+    <div class="col" id="search-col">
+      <div class="center-vertical search-container2">
+        <input type="text" name="search-bar" placeholder="Zadejte hledaný výraz" class="search-bar">
+        <a href="#" class="search-img-a">
+          <span class="material-symbols-outlined search-img">search</span>
+        </a>
+      </div>
     </div>
 </div>
 <!--MODAL LOGIN WINDOW-->
@@ -75,7 +84,7 @@
         <label for="password">Heslo:</label>
         <input type="password" id="password" class="modal-input-box">
       </div>
-      <div class="modal-row modal-row-forgotten">
+      <div class="modal-row    ">
         <div class="modal-empty-div1"></div>
         <button type="submit" class="modal-submit-btn">
           <span class="modal-submit-btn-text">

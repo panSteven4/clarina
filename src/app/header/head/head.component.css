@@ -16,8 +16,11 @@ a {
     display: flex;
     align-items: center;
     height: 95px;
-    padding-left: 15px;
-    padding-right: 15px;
+}
+
+.margin-sides {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .center-vertical {
@@ -48,20 +51,39 @@ a {
     height: 70px;
 }
 
+.text-pad-left {
+  padding-left: 3px;
+}
+
 .search-container {
     background-color: white;
     height: 32px;
     border-radius: 25px;
 }
 
+.search-container2 {
+  background-color: white;
+  height: 32px;
+  display: none;
+}
+
+.search-bar {
+  padding: 10px;
+}
+
 .search-img {
     color: var(--main-red);
-    padding-left: 7px;
+    padding: 4px 10px;
     border-left: 1px solid rgba(255, 0, 0, 0.158);
 }
 
 .lang-btn-container {
     position: relative;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-content.hidden {
@@ -70,8 +92,8 @@ a {
 
 .dropdown-content {
     position: absolute;
-    top: 75%;
-    right: 4%;
+    top: 35px;
+    left: -55px;
     background-color: white;
     overflow: auto;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -80,6 +102,8 @@ a {
 
 .shopping {
     background-color: #FBF3EC;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
@@ -275,18 +299,31 @@ input:focus {
 
 @media (max-width: 991px) {
     .row {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
     }
 
     .search-container {
-        order: 1;
-        width: 800px;
-        border-radius: 3px;
+      display: none
     }
 
-    .search-bar {
-        width: 770px;
-    }
+  .search-container2 {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #search-col {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 
     .shopping {
         background-color: var(--main-background);
@@ -294,16 +331,8 @@ input:focus {
 }
 
 @media (max-width: 800px) {
-    .search-container {
-        width: 100%;
-    }
-
-    .search-bar {
-        width: 97%;
-    }
-
     .cart-text {
-        display:none;
+        display: none;
     }
 
     .login-text {
@@ -316,11 +345,6 @@ input:focus {
 
     .shopping {
         background-color: var(--main-background);
-    }
-
-    .col {
-      padding-left: 8px;
-      padding-right: 8px;
     }
 
     .modal-row {
