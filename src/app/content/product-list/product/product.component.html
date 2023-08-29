@@ -8,7 +8,7 @@
       </div>
       <div class="row">
         <button class="cart-btn" [class.highlight-btn]="isHovered">
-          <span class="space-right">{{product.price | currency}} vč. DPH</span>
+          <span class="space-right">{{product.price | currency: 'CZK':'symbol':'1.0-0'}} vč. DPH</span>
           <span class="material-symbols-outlined">shopping_cart</span>
         </button>
       </div>

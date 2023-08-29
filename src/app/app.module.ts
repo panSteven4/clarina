@@ -29,7 +29,7 @@ import { FiltersComponent } from './content/filters/filters.component';
 import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RegistrationComponent } from './views/registration/registration.component';
-import { ProductDetailComponent } from './content/product-detail/product-detail.component';
+import { ProductDetailComponent } from './content/product-list/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,

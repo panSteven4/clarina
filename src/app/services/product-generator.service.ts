@@ -1,11 +1,13 @@
 import {Injectable} from '@angular/core';
 import {ProductAvailabilityEnum, ProductModel, ProductPricePerEnum} from "../models/product.model";
+import {ProductDetailComponent} from "../content/product-list/product-detail/product-detail.component";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductGeneratorService {
   lastID = 0;
+  products: ProductModel[] = [];
   private readonly imagePaths: string[] = [
     "assets/instruments/1.jpg",
     "assets/instruments/2.jpg",
@@ -624,8 +626,8 @@ export class ProductGeneratorService {
   }
 
   constructor() {
-    for (let i = 0; i < 100; i++) {
-      console.log(this.generateProduct());
+    for (let i = 0; i < 2000; i++) {
+      this.products.push(this.generateProduct())
     }
   }
   generateProduct(): ProductModel{
@@ -635,7 +637,7 @@ export class ProductGeneratorService {
       price: this.getRandomInt(100, 800000),
       available: this.getRandomItemFromArray([ProductAvailabilityEnum.Available, ProductAvailabilityEnum.Inquiry, ProductAvailabilityEnum.UnderFive]),
       product_code: this.getRandomString(6,8),
-      description: this.getRandomString(100, 500),
+      description: this.getRandomString(250, 1000),
       image_path: this.getRandomItemFromArray(this.imagePaths),
       productCategory: this.getRandomCategoryArray(this.categories),
       price_per: this.getRandomItemFromArray([ProductPricePerEnum.Piece, ProductPricePerEnum.Set]),
@@ -647,12 +649,21 @@ export class ProductGeneratorService {
   private getRandomString(min: number, max: number):string {
     let length: number = Math.floor(Math.random() * (max - min)) + min
     let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ';
+    let probabilityOfMeasure = 15; // probability of inserting a measure (the lower it is the higher probability)
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
     let counter = 0;
     while (counter < length) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
       counter += 1;
+      if(Math.floor(Math.random()*probabilityOfMeasure)<=1) {
+        probabilityOfMeasure = 13;
+        result += " ";
+        counter += 1
+      }
+      else {
+        probabilityOfMeasure -= 1
+      }
     }
     return result;
   }

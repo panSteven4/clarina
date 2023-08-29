@@ -13,7 +13,7 @@ import {NotFoundComponent} from "./views/not-found/not-found.component";
 import {KatalogDummyComponent} from "./views/katalog-dummy/katalog-dummy.component";
 import {DechyComponent} from "./views/katalog-dummy/katalog/dechy/dechy.component";
 import {RegistrationComponent} from "./views/registration/registration.component";
-import {ProductDetailComponent} from "./content/product-detail/product-detail.component";
+import {ProductDetailComponent} from "./content/product-list/product-detail/product-detail.component";
 
 const routes: Routes = [
   {path: "", component: HomepageComponent},
@@ -35,7 +35,7 @@ const routes: Routes = [
       {path: "strunne", component: StrunneComponent},
       // ↑TODO↑ - this will be later deleted - not possible to manually write everything
 
-      {path: ":name", component: ProductDetailComponent} //todo - learn how does this work and implement it
+      {path: ":id", component: ProductDetailComponent} //todo - learn how does this work and implement it
     ]
   },
 

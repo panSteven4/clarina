@@ -10,8 +10,6 @@ import {ProductModel} from "../../models/product.model";
 export class ProductListComponent {
   products: ProductModel[] = [];
   constructor(private ProductGeneratorService: ProductGeneratorService) {
-    for(let i = 0; i < 12; i++){
-      this.products.push(ProductGeneratorService.generateProduct())
-    }
+    this.products = ProductGeneratorService.products.slice(0,12);
   }
 }
