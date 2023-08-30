@@ -30,6 +30,7 @@ import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.compo
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RegistrationComponent } from './views/registration/registration.component';
 import { ProductDetailComponent } from './content/product-list/product-detail/product-detail.component';
+import { KatalogBreadcrumbsComponent } from './content/katalog-breadcrumbs/katalog-breadcrumbs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,7 @@ import { ProductDetailComponent } from './content/product-list/product-detail/pr
     KatalogDummyComponent,
     RegistrationComponent,
     ProductDetailComponent,
+    KatalogBreadcrumbsComponent,
   ],
     imports: [
         BrowserModule,
