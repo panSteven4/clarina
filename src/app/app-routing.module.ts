@@ -35,7 +35,7 @@ const routes: Routes = [
       {path: "strunne", component: StrunneComponent},
       // ↑TODO↑ - this will be later deleted - not possible to manually write everything
 
-      {path: ":id", component: ProductDetailComponent} //todo - learn how does this work and implement it
+      {path: ":id", component: ProductDetailComponent}
     ]
   },
 

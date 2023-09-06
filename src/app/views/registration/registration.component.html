@@ -34,10 +34,17 @@
         </div>
       </div>
       <div class="row">
-        <label for="password-again">
+        <label for="confirm_password">
           Heslo znovu:<span class="compulsory-star">*</span>
         </label>
-        <input type="password" id="password-again" formControlName="password_again">
+        <input type="password" id="confirm_password" formControlName="confirm_password">
+      </div>
+      <div class="small-row">
+        <div class="small-row-invisible-label"></div>
+        <div *ngIf="isMatchingPassword()" class="compulsory-message">
+          <span class="material-symbols-outlined compulsory-cross">close</span>
+          Hodnoty se neshodují
+        </div>
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>

@@ -177,7 +177,7 @@ input:-webkit-autofill:active{
 }
 .showDropdown2 {
   opacity: 1;
-  height: 330px;
+  height: 340px;
   transition: opacity 0.8s 0.5s, height 0.8s;
   pointer-events: all;
 }

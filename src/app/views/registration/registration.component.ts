@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators} from '@angular/forms';
+import {matchPassword} from "./passwordMatching.validator";
+
 
 
 @Component({
@@ -13,7 +15,7 @@ export class RegistrationComponent {
   profileForm = this.fb.group({
     nickname: ["", Validators.required],
     password: ["", Validators.required],
-    password_again: ["", Validators.required],
+    confirm_password: ["", Validators.required],
     firm_name: [""],
     ic: [""],
     dic: [""],
@@ -31,7 +33,11 @@ export class RegistrationComponent {
     delivery_city: [""],
     delivery_psc: [""],
     delivery_state: ["cz"]
-  })
+  },
+    {
+    validators: matchPassword
+    }
+  )
 
   constructor(private readonly fb: FormBuilder) { }
   toggleFirm(){
@@ -61,4 +67,17 @@ export class RegistrationComponent {
     return formsControl.touched && formsControl.invalid;
   }
 
+  isMatchingPassword() {
+    return this.profileForm.errors?.['passwordMatchError']
+      && this.profileForm.controls.confirm_password.dirty
+      && this.profileForm.controls.password.dirty;
+}
+
+  get password() {
+    return this.profileForm.controls['password'];
+  }
+
+  get confirm_password() {
+    return this.profileForm.controls["confirm_password"];
+  }
 }

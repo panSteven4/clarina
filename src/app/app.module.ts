@@ -31,6 +31,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RegistrationComponent } from './views/registration/registration.component';
 import { ProductDetailComponent } from './content/product-list/product-detail/product-detail.component';
 import { KatalogBreadcrumbsComponent } from './content/katalog-breadcrumbs/katalog-breadcrumbs.component';
+import { HighlightDirective } from './directives/highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +61,7 @@ import { KatalogBreadcrumbsComponent } from './content/katalog-breadcrumbs/katal
     RegistrationComponent,
     ProductDetailComponent,
     KatalogBreadcrumbsComponent,
+    HighlightDirective,
   ],
     imports: [
         BrowserModule,
