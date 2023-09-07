@@ -14,10 +14,13 @@ import {KatalogDummyComponent} from "./views/katalog-dummy/katalog-dummy.compone
 import {DechyComponent} from "./views/katalog-dummy/katalog/dechy/dechy.component";
 import {RegistrationComponent} from "./views/registration/registration.component";
 import {ProductDetailComponent} from "./content/product-list/product-detail/product-detail.component";
+import {leaveGuard} from "./leave.guard";
+import {OnInit, OnDestroy} from "@angular/core";
 
 const routes: Routes = [
   {path: "", component: HomepageComponent},
-  {path: "registrace", component: RegistrationComponent},
+  {path: "registrace", component: RegistrationComponent,
+  canDeactivate: [leaveGuard]},
   {
     path: "katalog",
     component: KatalogDummyComponent,
@@ -25,7 +28,7 @@ const routes: Routes = [
       {path: "", component: KatalogComponent},
 
       // ↓TODO↓ - this will be later deleted - not possible to manually write everything
-      {path: "bici", component: BiciComponent},
+      {path: "bici", component: BiciComponent, },
       {path: "darky", component: DarkyComponent},
       {path: "dechy", component: DechyComponent},
       {path: "klavesove", component: KlavesoveComponent},
@@ -46,4 +49,11 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule implements OnInit, OnDestroy{
+  ngOnInit() {
+
+  }
+
+  ngOnDestroy() {
+  }
+}

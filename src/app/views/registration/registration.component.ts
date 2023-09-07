@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 import {matchPassword} from "./passwordMatching.validator";
-
+import {OnInit} from "@angular/core";
+import {isFormDirtyService} from "../../services/is-form-dirty.service";
+import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 
 
 @Component({
@@ -9,7 +11,7 @@ import {matchPassword} from "./passwordMatching.validator";
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent {
+export class RegistrationComponent implements OnInit {
   isDroppedFirm = false;
   isDroppedAddress = false;
   profileForm = this.fb.group({
@@ -39,7 +41,11 @@ export class RegistrationComponent {
     }
   )
 
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder, private readonly isFormDirtyService: isFormDirtyService) {
+    this.profileForm.valueChanges.pipe(takeUntilDestroyed()).subscribe(
+      () => this.isFormDirtyService.isFormDirty$.next(this.profileForm.dirty)
+    )
+  }
   toggleFirm(){
     this.isDroppedFirm = !this.isDroppedFirm;
   }
@@ -79,5 +85,10 @@ export class RegistrationComponent {
 
   get confirm_password() {
     return this.profileForm.controls["confirm_password"];
+  }
+
+  ngOnInit() {
+
+
   }
 }
