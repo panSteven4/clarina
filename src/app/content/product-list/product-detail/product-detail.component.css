@@ -78,6 +78,7 @@ h1 {
 
   >.big-image {
     margin: 15px 15px 30px;
+    cursor: pointer;
   }
 
 }
@@ -161,13 +162,13 @@ h1 {
 .showGallery {
   pointer-events: auto;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 .hideGallery {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 

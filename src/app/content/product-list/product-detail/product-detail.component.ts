@@ -42,4 +42,8 @@ export class ProductDetailComponent implements OnInit{
   changeMainImage(new_image_path: string): void {
     this.current_image_path = new_image_path;
   }
+
+  showGallery() {
+    if(this.current_image_path && this.product) this.ShowGalleryService.showGallery(this.current_image_path, this.product);
+  }
 }

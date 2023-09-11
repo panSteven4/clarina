@@ -1,16 +1,16 @@
 <div class="container">
   <div class="image-container">
     <div *ngIf="ShowGalleryService.isButtonLeftVisible()" class="left-button-section" (click)="ShowGalleryService.swipeImageLeft()">
-      <button class="left-button gallery-button"
-              (click)="ShowGalleryService.swipeImageLeft()"><span class="material-symbols-outlined symbol">chevron_left</span></button>
+      <button class="left-button gallery-button"><span class="material-symbols-outlined symbol">chevron_left</span></button>
     </div>
 
     <img src="{{ShowGalleryService.current_image_path}}" alt="{{ShowGalleryService.product?.name}}">
     <div *ngIf="ShowGalleryService.isButtonRightVisible()" class="right-button-section" (click)="ShowGalleryService.swipeImageRight()">
-      <button (click)="ShowGalleryService.swipeImageRight()"
-              class="right-button gallery-button"><span class="material-symbols-outlined symbol">chevron_right</span></button>
+      <button class="right-button gallery-button"><span class="material-symbols-outlined symbol">chevron_right</span></button>
     </div>
-    <button id="cancel-button" class="gallery-button"><span class="material-symbols-outlined symbol" (click)="ShowGalleryService.hideGallery()">close</span></button>
+    <div class="x-button-section">
+      <button id="cancel-button" class="gallery-button"><span class="material-symbols-outlined symbol" (click)="ShowGalleryService.hideGallery()">close</span></button>
+    </div>
   </div>
 </div>
 <div [ngClass]="{overlayHidden: !ShowGalleryService.isGalleryVisible,
