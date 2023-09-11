@@ -1,1 +1,14 @@
-<p>gallery works!</p>
+<div class="container">
+  <div class="image-container">
+    <button *ngIf="ShowGalleryService.isButtonLeftVisible()" class="left-button gallery-button"
+    (click)="ShowGalleryService.swipeImageLeft()"><span class="material-symbols-outlined symbol">chevron_left</span></button>
+    <img src="{{ShowGalleryService.current_image_path}}" alt="{{ShowGalleryService.product?.name}}">
+    <button *ngIf="ShowGalleryService.isButtonRightVisible()"
+            (click)="ShowGalleryService.swipeImageRight()"
+            class="right-button gallery-button"><span class="material-symbols-outlined symbol">chevron_right</span></button>
+    <button id="cancel-button" class="gallery-button"><span class="material-symbols-outlined symbol" (click)="ShowGalleryService.hideGallery()">close</span></button>
+  </div>
+</div>
+<div [ngClass]="{overlayHidden: !ShowGalleryService.isGalleryVisible,
+ overlayShown: ShowGalleryService.isGalleryVisible}" class="gallery-overlay"
+(click)="ShowGalleryService.hideGallery()"></div>
