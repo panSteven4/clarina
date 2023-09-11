@@ -4,6 +4,7 @@ import {ProductGeneratorService} from "../../../services/product-generator.servi
 import {ProductAvailabilityEnum, ProductModel} from "../../../models/product.model";
 import {CurrencyPipe, registerLocaleData} from "@angular/common";
 import localeCs from "@angular/common/locales/cs";
+import {ShowGalleryService} from "../../../services/show-gallery.service";
 
 @Component({
   selector: 'app-product-detail',
@@ -18,7 +19,9 @@ export class ProductDetailComponent implements OnInit{
   products : ProductModel[];
   priceWithoutTax: number = 0;
   current_image_path: string|undefined;
-  constructor(private route: ActivatedRoute, private ProductGeneratorService: ProductGeneratorService) {
+  constructor(private route: ActivatedRoute,
+              private ProductGeneratorService: ProductGeneratorService,
+              public ShowGalleryService: ShowGalleryService) {
     this.products = ProductGeneratorService.products;
     registerLocaleData(localeCs);
   }

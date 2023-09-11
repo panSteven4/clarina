@@ -30,6 +30,7 @@ h1 {
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  max-width: 565px;
 }
 
 .slideshow {
@@ -52,6 +53,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor:pointer;
 
   >img {
     max-height: var(--image-size);
@@ -67,9 +69,19 @@ h1 {
   margin-right: 40px;
 }
 
-.big-image {
-  margin: 15px 15px 30px;
+.big-image-section {
+  width: 330px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  >.big-image {
+    margin: 15px 15px 30px;
+  }
+
 }
+
 
 .product-code {
   margin: 25px 0;
@@ -146,6 +158,20 @@ h1 {
   }
 }
 
+.showGallery {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.hideGallery {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s;
+}
+
+
+
 
 #random-info-section>span:not(:last-child):after {
   content: "|";
@@ -166,6 +192,9 @@ h1 {
   font-size: 16px;
 }
 
+.highlight {
+  border: 1px solid var(--main-red);
+}
 
 
 @media only screen and (max-width: 770px) {
@@ -177,8 +206,14 @@ h1 {
 
   }
 
+  .slideshow {
+    padding-right: unset;
+    margin: auto;
+    justify-content: center;
+  }
+
   .image-section {
-    width: unset;
+    width: auto;
   }
 
   .detail-section {

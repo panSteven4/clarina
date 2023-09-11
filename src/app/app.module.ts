@@ -32,6 +32,7 @@ import { RegistrationComponent } from './views/registration/registration.compone
 import { ProductDetailComponent } from './content/product-list/product-detail/product-detail.component';
 import { KatalogBreadcrumbsComponent } from './content/katalog-breadcrumbs/katalog-breadcrumbs.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { GalleryComponent } from './content/gallery/gallery.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     ProductDetailComponent,
     KatalogBreadcrumbsComponent,
     HighlightDirective,
+    GalleryComponent,
   ],
     imports: [
         BrowserModule,
