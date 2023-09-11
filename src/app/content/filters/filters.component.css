@@ -74,9 +74,10 @@ input[type="range"]::-webkit-slider-thumb{
   height: 17px;
   width: 17px;
   -webkit-appearance: none;
-  background: var(--main-red);
-  border-radius: 50%;
+  background: white;
+  /*border-radius: 50%;*/
   pointer-events: auto;
+  border: 2px solid var(--main-red);
 }
 
 .red-square-checkbox {

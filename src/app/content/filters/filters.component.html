@@ -6,11 +6,11 @@
         <span class="min-price">{{minValue}} Kč</span>
       </div>
       <div class="slider">
-        <div class="progress" [ngStyle]="sliderClass"></div>
+        <div class="progress" [ngStyle]="sliderProgressClass"></div>
       </div>
       <div class="range-input">
-        <input type="range" [(ngModel)]="minValue" (ngModelChange)="prettifySliderLeft()" class="range-min" min="0" max="300000">
-        <input type="range" [(ngModel)]="maxValue" (ngModelChange)="prettifySliderRight()" class="range-max" min="0" max="300000">
+        <input type="range" [(ngModel)]="minValue" (input)="prettifySliderLeft()" class="range-min" min="0" max="{{max}}" (ngModelChange)="prettifySliderLeft()">
+        <input type="range" [(ngModel)]="maxValue" (input)="prettifySliderRight()" class="range-max" min="0" max="{{max}}" (ngModelChange)="prettifySliderRight()">
       </div>
       <div class="field field-two">
         <span class="max-price">{{maxValue}} Kč</span>

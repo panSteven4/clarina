@@ -17,6 +17,7 @@ export class ProductDetailComponent implements OnInit{
   product : ProductModel | undefined;
   products : ProductModel[];
   priceWithoutTax: number = 0;
+  current_image_path: string|undefined;
   constructor(private route: ActivatedRoute, private ProductGeneratorService: ProductGeneratorService) {
     this.products = ProductGeneratorService.products;
     registerLocaleData(localeCs);
@@ -30,7 +31,12 @@ export class ProductDetailComponent implements OnInit{
     if(this.product != undefined) {
       this.priceWithoutTax = this.product?.price * 0.85;
     }
+    this.current_image_path = this.product?.image_paths[0];
   }
 
   protected readonly ProductAvailabilityEnum = ProductAvailabilityEnum;
+
+  changeMainImage(new_image_path: string): void {
+    this.current_image_path = new_image_path;
+  }
 }

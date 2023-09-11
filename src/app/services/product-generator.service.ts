@@ -638,7 +638,7 @@ export class ProductGeneratorService {
       available: this.getRandomItemFromArray([ProductAvailabilityEnum.Available, ProductAvailabilityEnum.Inquiry, ProductAvailabilityEnum.UnderFive]),
       product_code: this.getRandomString(6,8),
       description: this.getRandomString(250, 1000),
-      image_path: this.getRandomItemFromArray(this.imagePaths),
+      image_paths: this.getRandomImagePaths(),
       productCategory: this.getRandomCategoryArray(this.categories),
       price_per: this.getRandomItemFromArray([ProductPricePerEnum.Piece, ProductPricePerEnum.Set]),
       warranty: this.getRandomInt(1, 60)
@@ -709,4 +709,12 @@ export class ProductGeneratorService {
     const keys = Object.keys(obj);
     return obj[keys[keys.length * Math.random() << 0]];
   };
+
+  private getRandomImagePaths(): string[] {
+    let result = [];
+    for(let i = 0; i < this.getRandomInt(1, 6); i++){
+      result.push(this.getRandomItemFromArray(this.imagePaths))
+    }
+    return result;
+  }
 }

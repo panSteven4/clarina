@@ -7,11 +7,13 @@ import { Component} from '@angular/core';
 })
 export class FiltersComponent {
   isDropped = false;
-  max= 300000 // this will be later the most expensive item in current view;
-  priceGap = 3000;
+  max = 300000 // this will be later the most expensive item in current view;
+  priceGap = 18000;
   minValue = 0;
   maxValue = this.max;
-  sliderClass = {};
+  sliderProgressClass = {};
+  sliderLeftPointerClass = {};
+  sliderRightPointerClass = {};
 
   toggle() {
     this.isDropped = !this.isDropped;
@@ -20,22 +22,21 @@ export class FiltersComponent {
   prettifySliderLeft() {
     if(this.maxValue - this.minValue < this.priceGap){
       this.minValue = this.maxValue - this.priceGap;
-    }else{
-      this.sliderClass = {
-        "left": +(this.minValue/this.max*100)+"%",
-        "right": +(100-(this.maxValue/this.max*100))+"%"
-      }
+    }
+    this.sliderProgressClass = {
+      "left": +(this.minValue/this.max*100)+"%",
+      "right": +(100-(this.maxValue/this.max*100))+"%"
     }
   }
 
   prettifySliderRight() {
     if(this.maxValue - this.minValue < this.priceGap){
       this.maxValue = this.minValue + this.priceGap;
-    }else{
-      this.sliderClass = {
-        "left": +(this.minValue/this.max*100)+"%",
-        "right": +(100-(this.maxValue/this.max*100))+"%"
-      }
+    }
+    this.sliderProgressClass = {
+      "left": +(this.minValue/this.max*100)+"%",
+      "right": +(100-(this.maxValue/this.max*100))+"%"
+
     }
   }
 }

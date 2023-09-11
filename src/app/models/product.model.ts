@@ -5,7 +5,7 @@ export interface ProductModel {
   available: ProductAvailabilityEnum; // na dotaz|skladem|počet ks skladem
   product_code: string;
   description: string;
-  image_path: string;
+  image_paths: string[];
   warranty: number;
   price_per: ProductPricePerEnum;
   productCategory: string[];

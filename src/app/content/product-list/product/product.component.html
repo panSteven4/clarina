@@ -1,7 +1,7 @@
 <a class="anchor-cont" [class.pointer]="isHovered" (mouseover)="onHover()" (mouseout)="onHoverEnd()">
   <div *ngIf="product" class="col">
       <div class="row img">
-          <img src="{{product.image_path}}" alt="clarinet-buffet crampon">
+          <img src="{{product.image_paths[0]}}" alt="clarinet-buffet crampon">
       </div>
       <div class="row title" [class.highlight-text]="isHovered">
           {{product.name}}
