@@ -48,16 +48,12 @@ export class ShowGalleryService {
   }
 
   isButtonRightVisible(): boolean{
-    if (this.product && typeof(this.current_index)!=="undefined" && this.current_index < this.product.image_paths.length-1){
-      return true;
-    }
-    return false;
+    return !!(this.product && typeof (this.current_index) !== "undefined" && this.current_index < this.product.image_paths.length - 1);
+
   }
 
   isButtonLeftVisible():boolean {
-    if (this.product && this.current_index && this.current_index > 0) {
-      return true;
-    }
-    return false
+    return !!(this.product && this.current_index && this.current_index > 0);
+
   }
 }
