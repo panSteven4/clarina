@@ -1,7 +1,3 @@
-export interface Slide {
-  name: string;
-  title: string;
-  description: string;
-  imagePath: string;
-  moreButtonLink: string;
-}
+import { CartItem } from './cart-item.model';
+
+export type Cart = CartItem[];

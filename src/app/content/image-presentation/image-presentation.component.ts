@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Slide } from '../../models/cart.model';
+import { Slide } from '../../models/slideshow.model';
 
 @Component({
   selector: 'app-image-presentation',
