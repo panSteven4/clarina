@@ -3,32 +3,53 @@
     <span class="title price">Cena:</span>
     <div class="price-slider">
       <div class="field field-one">
-        <span class="min-price">{{minValue}} Kč</span>
+        <span class="min-price">{{ minValue }} Kč</span>
       </div>
       <div class="slider">
         <div class="progress" [ngStyle]="sliderProgressClass"></div>
       </div>
       <div class="range-input">
-        <input type="range" [(ngModel)]="minValue" (input)="prettifySliderLeft()" class="range-min" min="0" max="{{max}}" (ngModelChange)="prettifySliderLeft()">
-        <input type="range" [(ngModel)]="maxValue" (input)="prettifySliderRight()" class="range-max" min="0" max="{{max}}" (ngModelChange)="prettifySliderRight()">
+        <input
+          type="range"
+          [(ngModel)]="minValue"
+          (input)="prettifySliderLeft()"
+          class="range-min"
+          min="0"
+          max="{{ max }}"
+          (ngModelChange)="prettifySliderLeft()"
+        />
+        <input
+          type="range"
+          [(ngModel)]="maxValue"
+          (input)="prettifySliderRight()"
+          class="range-max"
+          min="0"
+          max="{{ max }}"
+          (ngModelChange)="prettifySliderRight()"
+        />
       </div>
       <div class="field field-two">
-        <span class="max-price">{{maxValue}} Kč</span>
+        <span class="max-price">{{ maxValue }} Kč</span>
       </div>
     </div>
     <div class="dropdown-btn-container">
       <button class="available-button" (click)="toggle()">
-        <span>
-          Výrobce
-        </span>
-        <span *ngIf="!isDropped" class="material-symbols-outlined available-button-arrow-symbol">
+        <span> Výrobce </span>
+        <span
+          *ngIf="!isDropped"
+          class="material-symbols-outlined available-button-arrow-symbol"
+        >
           arrow_drop_down
         </span>
-        <span *ngIf="isDropped" class="material-symbols-outlined available-button-arrow-symbol">
+        <span
+          *ngIf="isDropped"
+          class="material-symbols-outlined available-button-arrow-symbol"
+        >
           arrow_drop_up
         </span>
       </button>
-      <div class="dropdown-content hidden" [ngClass]="{hidden: !isDropped}"> <!--this will be later done with *ngFor, but now there are no data-->
+      <div class="dropdown-content hidden" [ngClass]="{ hidden: !isDropped }">
+        <!--this will be later done with *ngFor, but now there are no data-->
         <a>Výrobce uga buga</a>
         <a>Uga buga s.r.o.</a>
         <a>Uga buga tvoje volba</a>
@@ -36,31 +57,51 @@
       </div>
     </div>
   </div>
-  <hr>
+  <hr />
   <div class="row">
     <span class="title">Filtry:</span>
     <label for="action" class="checkbox-label">
-      <input type="checkbox" name="action" id="action" class="red-square-checkbox">
+      <input
+        type="checkbox"
+        name="action"
+        id="action"
+        class="red-square-checkbox"
+      />
       <span class="checkmark"></span>
       Akce
     </label>
     <label for="novelty" class="checkbox-label">
-      <input type="checkbox" name="novelty" id="novelty" class="red-square-checkbox">
+      <input
+        type="checkbox"
+        name="novelty"
+        id="novelty"
+        class="red-square-checkbox"
+      />
       <span class="checkmark"></span>
       Novinka
     </label>
     <label for="recommended" class="checkbox-label">
-      <input type="checkbox" name="recommended" id="recommended" class="red-square-checkbox">
+      <input
+        type="checkbox"
+        name="recommended"
+        id="recommended"
+        class="red-square-checkbox"
+      />
       <span class="checkmark"></span>
       Doporučujeme
     </label>
     <label for="only-available" class="checkbox-label">
-      <input type="checkbox" name="only-available" id="only-available" class="red-square-checkbox">
+      <input
+        type="checkbox"
+        name="only-available"
+        id="only-available"
+        class="red-square-checkbox"
+      />
       <span class="checkmark"></span>
       Jen skladem
     </label>
   </div>
-  <hr>
+  <hr />
   <div class="row">
     <span class="title">Zobrazit:</span>
     <span class="show-link"><a>Top</a></span>
@@ -69,9 +110,9 @@
     <span class="show-link"><a>Od nejlevnějšího</a></span>
     <span class="show-link"><a>Od nejdražšího</a></span>
   </div>
-  <hr>
+  <hr />
   <div class="row number-page-container">
-<!--this will be later done using *ngFor, typescript and directives, but now there are no data for that-->
+    <!--this will be later done using *ngFor, typescript and directives, but now there are no data for that-->
     <a>Předchozí</a>
     <a>1</a>
     <a>2</a>

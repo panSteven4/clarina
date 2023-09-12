@@ -8,7 +8,7 @@ describe('KlavesoveComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [KlavesoveComponent]
+      declarations: [KlavesoveComponent],
     });
     fixture = TestBed.createComponent(KlavesoveComponent);
     component = fixture.componentInstance;

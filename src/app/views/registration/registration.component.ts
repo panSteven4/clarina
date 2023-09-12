@@ -1,52 +1,57 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators} from '@angular/forms';
-import {matchPassword} from "./passwordMatching.validator";
-import {OnInit} from "@angular/core";
-import {isFormDirtyService} from "../../services/is-form-dirty.service";
-import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
-
+import { FormBuilder, Validators } from '@angular/forms';
+import { matchPassword } from './passwordMatching.validator';
+import { OnInit } from '@angular/core';
+import { isFormDirtyService } from '../../services/is-form-dirty.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.css']
+  styleUrls: ['./registration.component.css'],
 })
 export class RegistrationComponent implements OnInit {
   isDroppedFirm = false;
   isDroppedAddress = false;
-  profileForm = this.fb.group({
-    nickname: ["", Validators.required],
-    password: ["", Validators.required],
-    confirm_password: ["", Validators.required],
-    firm_name: [""],
-    ic: [""],
-    dic: [""],
-    title: [""],
-    firstname: ["", Validators.required],
-    surname: ["", Validators.required],
-    email: ["", [Validators.required, Validators.email]],
-    phone_number: [""],
-    street: ["", Validators.required],
-    city: ["", Validators.required],
-    psc: ["", Validators.required],
-    state: ["cz"],
-    name_or_firm_name: [""],
-    delivery_street: [""],
-    delivery_city: [""],
-    delivery_psc: [""],
-    delivery_state: ["cz"]
-  },
+  profileForm = this.fb.group(
     {
-    validators: matchPassword
-    }
-  )
+      nickname: ['', Validators.required],
+      password: ['', Validators.required],
+      confirm_password: ['', Validators.required],
+      firm_name: [''],
+      ic: [''],
+      dic: [''],
+      title: [''],
+      firstname: ['', Validators.required],
+      surname: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone_number: [''],
+      street: ['', Validators.required],
+      city: ['', Validators.required],
+      psc: ['', Validators.required],
+      state: ['cz'],
+      name_or_firm_name: [''],
+      delivery_street: [''],
+      delivery_city: [''],
+      delivery_psc: [''],
+      delivery_state: ['cz'],
+    },
+    {
+      validators: matchPassword,
+    },
+  );
 
-  constructor(private readonly fb: FormBuilder, private readonly isFormDirtyService: isFormDirtyService) {
-    this.profileForm.valueChanges.pipe(takeUntilDestroyed()).subscribe(
-      () => this.isFormDirtyService.isFormDirty$.next(this.profileForm.dirty)
-    )
+  constructor(
+    private readonly fb: FormBuilder,
+    private readonly isFormDirtyService: isFormDirtyService,
+  ) {
+    this.profileForm.valueChanges
+      .pipe(takeUntilDestroyed())
+      .subscribe(() =>
+        this.isFormDirtyService.isFormDirty$.next(this.profileForm.dirty),
+      );
   }
-  toggleFirm(){
+  toggleFirm() {
     this.isDroppedFirm = !this.isDroppedFirm;
   }
 
@@ -55,40 +60,39 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit() {
-  //   TODO - where should I send new profile?
+    //   TODO - where should I send new profile?
     console.log(this.profileForm);
 
-    this.profileForm.reset() // deletes every filled cell in form - resets everything
+    this.profileForm.reset(); // deletes every filled cell in form - resets everything
   }
 
-  showError(name: string):boolean {
-    if(!this.profileForm){
-      return false
+  showError(name: string): boolean {
+    if (!this.profileForm) {
+      return false;
     }
-    const formsControl = this.profileForm.get(name)
-    if(!formsControl){
-      return false
+    const formsControl = this.profileForm.get(name);
+    if (!formsControl) {
+      return false;
     }
-    formsControl.hasValidator(Validators.required)
+    formsControl.hasValidator(Validators.required);
     return formsControl.touched && formsControl.invalid;
   }
 
   isMatchingPassword() {
-    return this.profileForm.errors?.['passwordMatchError']
-      && this.profileForm.controls.confirm_password.dirty
-      && this.profileForm.controls.password.dirty;
-}
+    return (
+      this.profileForm.errors?.['passwordMatchError'] &&
+      this.profileForm.controls.confirm_password.dirty &&
+      this.profileForm.controls.password.dirty
+    );
+  }
 
   get password() {
     return this.profileForm.controls['password'];
   }
 
   get confirm_password() {
-    return this.profileForm.controls["confirm_password"];
+    return this.profileForm.controls['confirm_password'];
   }
 
-  ngOnInit() {
-
-
-  }
+  ngOnInit() {}
 }

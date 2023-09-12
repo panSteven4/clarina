@@ -1,32 +1,74 @@
 <div class="container">
-    <div class="animation-box" [ngStyle]="{'background-image': 'url(' + slides[currentSlide].imagePath + ')'}">
-        <div class="animation-item">
-            <h3 class="title animation-item-item">{{ slides[currentSlide].title }}</h3>
-            <span class="description animation-item-item"> {{ slides[currentSlide].description }}</span>
-            <button class="more-btn animation-item-item"><span>Více</span><span class="material-symbols-outlined btn-arrow">chevron_right</span></button>
-        </div>
+  <div
+    class="animation-box"
+    [ngStyle]="{
+      'background-image': 'url(' + slides[currentSlide].imagePath + ')'
+    }"
+  >
+    <div class="animation-item">
+      <h3 class="title animation-item-item">
+        {{ slides[currentSlide].title }}
+      </h3>
+      <span class="description animation-item-item">
+        {{ slides[currentSlide].description }}</span
+      >
+      <button class="more-btn animation-item-item">
+        <span>Více</span
+        ><span class="material-symbols-outlined btn-arrow">chevron_right</span>
+      </button>
     </div>
+  </div>
 
-    <div class="number-box">
-        <div class="num">
-            <h4>CLARINA MUSIC</h4>
-            <button (click)=setSlide(0) class="num-btn" [ngClass]="{highlightButton: currentSlide==0}">1</button>
-        </div>
-        <div class="num">
-            <h4>Koncertní nástroje</h4>
-            <button (click)=setSlide(1) class="num-btn" [ngClass]="{highlightButton: currentSlide==1}">2</button>
-        </div>
-        <div class="num">
-            <h4>Příslušenství a noty</h4>
-            <button (click)=setSlide(2) class="num-btn" [ngClass]="{highlightButton: currentSlide==2}">3</button>
-        </div>
-        <div class="num">
-            <h4>Nová prodejna v Bratislavě</h4>
-            <button (click)="setSlide(3)" class="num-btn" [ngClass]="{highlightButton: currentSlide==3}">4</button>
-        </div>
-        <div class="num">
-            <h4>Změna otevírací doby</h4>
-            <button (click)="setSlide(4)" class="num-btn" [ngClass]="{highlightButton: currentSlide==4}">5</button>
-        </div>
+  <div class="number-box">
+    <div class="num">
+      <h4>CLARINA MUSIC</h4>
+      <button
+        (click)="setSlide(0)"
+        class="num-btn"
+        [ngClass]="{ highlightButton: currentSlide == 0 }"
+      >
+        1
+      </button>
     </div>
+    <div class="num">
+      <h4>Koncertní nástroje</h4>
+      <button
+        (click)="setSlide(1)"
+        class="num-btn"
+        [ngClass]="{ highlightButton: currentSlide == 1 }"
+      >
+        2
+      </button>
+    </div>
+    <div class="num">
+      <h4>Příslušenství a noty</h4>
+      <button
+        (click)="setSlide(2)"
+        class="num-btn"
+        [ngClass]="{ highlightButton: currentSlide == 2 }"
+      >
+        3
+      </button>
+    </div>
+    <div class="num">
+      <h4>Nová prodejna v Bratislavě</h4>
+      <button
+        (click)="setSlide(3)"
+        class="num-btn"
+        [ngClass]="{ highlightButton: currentSlide == 3 }"
+      >
+        4
+      </button>
+    </div>
+    <div class="num">
+      <h4>Změna otevírací doby</h4>
+      <button
+        (click)="setSlide(4)"
+        class="num-btn"
+        [ngClass]="{ highlightButton: currentSlide == 4 }"
+      >
+        5
+      </button>
+    </div>
+  </div>
 </div>

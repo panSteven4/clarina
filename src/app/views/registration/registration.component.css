@@ -51,7 +51,7 @@ label {
 
 .group-header {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 .submit-section {
@@ -62,7 +62,7 @@ label {
 }
 
 .submit-btn {
-  background-color: #45BD0A;
+  background-color: #45bd0a;
   border-radius: 5px;
   width: 185px;
   cursor: pointer;
@@ -73,17 +73,16 @@ label {
 }
 
 .submit-btn:hover {
-  background-color: #338D07;
+  background-color: #338d07;
 }
 
-
-.submit-btn:disabled  {
-  background-color: rgba(69, 189, 10, 0.40);
+.submit-btn:disabled {
+  background-color: rgba(69, 189, 10, 0.4);
   cursor: default;
 }
 
 .btn-checkmark {
-  background-color: #338D07;
+  background-color: #338d07;
   margin-right: 15px;
   padding: 5px;
   border-top-left-radius: 5px;
@@ -92,13 +91,11 @@ label {
 
 .submit-btn:disabled .btn-checkmark {
   background-color: rgba(51, 141, 7, 0.3);
-
 }
 
 .submit-btn-text {
   padding-right: 13px;
 }
-
 
 select {
   border: 1px solid rgba(68, 68, 68, 0.3);
@@ -120,7 +117,7 @@ input:focus {
 }
 
 .custom-select:focus {
-  border-color: rgba(68, 68, 68, 0.6)
+  border-color: rgba(68, 68, 68, 0.6);
 }
 
 .small-row {
@@ -141,7 +138,7 @@ input:focus {
   padding: 7px 10px;
 }
 
-.compulsory-cross{
+.compulsory-cross {
   font-size: 15px;
   padding-right: 4px;
 }
@@ -155,13 +152,15 @@ input:focus {
   opacity: 0;
   height: 0;
   pointer-events: none;
-  transition: opacity 0.8s, height 0.8s 0.5s;
+  transition:
+    opacity 0.8s,
+    height 0.8s 0.5s;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active{
+input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
@@ -172,20 +171,24 @@ input:-webkit-autofill:active{
 .showDropdown1 {
   opacity: 1;
   height: 190px;
-  transition: opacity 0.8s 0.5s, height 0.8s;
+  transition:
+    opacity 0.8s 0.5s,
+    height 0.8s;
   pointer-events: all;
 }
 .showDropdown2 {
   opacity: 1;
   height: 340px;
-  transition: opacity 0.8s 0.5s, height 0.8s;
+  transition:
+    opacity 0.8s 0.5s,
+    height 0.8s;
   pointer-events: all;
 }
 
 @media only screen and (max-width: 1200px) {
   .container {
     width: 940px;
- }
+  }
 
   .row {
     width: 450px;
@@ -195,7 +198,6 @@ input:-webkit-autofill:active{
     width: 221px;
   }
 }
-
 
 @media only screen and (max-width: 1000px) {
   .container {
@@ -221,7 +223,7 @@ input:-webkit-autofill:active{
     font-size: 25px;
   }
 
-  .row{
+  .row {
     flex-direction: column;
     width: 100%;
   }
@@ -269,7 +271,4 @@ input:-webkit-autofill:active{
   .showDropdown2 {
     height: 510px;
   }
-
 }
-
-

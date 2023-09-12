@@ -1,48 +1,135 @@
 <nav>
-    <div class="col">
-        <a routerLink="/katalog/dechy" routerLinkActive="active" class="icon-flex"><img src="assets/menu_dechove.png" alt="dech" class="img">DECHOVÉ NÁSTROJE</a>
-    </div>
-    <div class="col">
-        <a routerLink="/katalog/smycce" routerLinkActive="active" class="icon-flex"><img src="assets/menu_smyccove.png" alt="smyčce" class="img">SMYČCOVÉ NÁSTROJE</a>
-    </div>
-    <div class="col">
-        <a routerLink="/katalog/strunne" routerLinkActive="active" class="icon-flex"><img src="assets/menu_strune-drnkaci.png" alt="strunné" class="img">STRUNNÉ A DRNKACÍ NÁSTROJE</a>
-    </div>
-    <div class="col">
-        <a routerLink="/katalog/klavesove" routerLinkActive="active" class="icon-flex"><img src="assets/menu_klavesove.png" alt="klaves" class="img">KLÁVESOVÉ NÁSTROJE</a>
-    </div>
-    <div class="col">
-        <a routerLink="/katalog/bici" routerLinkActive="active" class="icon-flex"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img">KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
-    </div>
-    <div class="col">
-        <a routerLink="/katalog/noty" routerLinkActive="active" class="icon-flex"><img src="assets/menu_noty.png" alt="noty" class="img">NOTY PRO HUDEBNÍ NÁSTROJE</a>
-    </div>
-    <div class="col">
-        <a routerLink="/katalog/darky" routerLinkActive="active" class="icon-flex"><img src="assets/menu_darky.png" alt="darkove" class="img">DÁRKOVÉ ZBOŽÍ</a>
-    </div>
-    <div class="col last-col">
-        <a routerLink="/katalog/prislusenstvi" routerLinkActive="active" class="icon-flex">PŘÍSLUŠENSTVÍ</a>
-    </div>
+  <div class="col">
+    <a routerLink="/katalog/dechy" routerLinkActive="active" class="icon-flex"
+      ><img src="assets/menu_dechove.png" alt="dech" class="img" />DECHOVÉ
+      NÁSTROJE</a
+    >
+  </div>
+  <div class="col">
+    <a routerLink="/katalog/smycce" routerLinkActive="active" class="icon-flex"
+      ><img src="assets/menu_smyccove.png" alt="smyčce" class="img" />SMYČCOVÉ
+      NÁSTROJE</a
+    >
+  </div>
+  <div class="col">
+    <a routerLink="/katalog/strunne" routerLinkActive="active" class="icon-flex"
+      ><img
+        src="assets/menu_strune-drnkaci.png"
+        alt="strunné"
+        class="img"
+      />STRUNNÉ A DRNKACÍ NÁSTROJE</a
+    >
+  </div>
+  <div class="col">
+    <a
+      routerLink="/katalog/klavesove"
+      routerLinkActive="active"
+      class="icon-flex"
+      ><img src="assets/menu_klavesove.png" alt="klaves" class="img" />KLÁVESOVÉ
+      NÁSTROJE</a
+    >
+  </div>
+  <div class="col">
+    <a routerLink="/katalog/bici" routerLinkActive="active" class="icon-flex"
+      ><img
+        src="assets/menu_bici-perkuse.png"
+        alt="koncertní"
+        class="img"
+      />KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a
+    >
+  </div>
+  <div class="col">
+    <a routerLink="/katalog/noty" routerLinkActive="active" class="icon-flex"
+      ><img src="assets/menu_noty.png" alt="noty" class="img" />NOTY PRO HUDEBNÍ
+      NÁSTROJE</a
+    >
+  </div>
+  <div class="col">
+    <a routerLink="/katalog/darky" routerLinkActive="active" class="icon-flex"
+      ><img src="assets/menu_darky.png" alt="darkove" class="img" />DÁRKOVÉ
+      ZBOŽÍ</a
+    >
+  </div>
+  <div class="col last-col">
+    <a
+      routerLink="/katalog/prislusenstvi"
+      routerLinkActive="active"
+      class="icon-flex"
+      >PŘÍSLUŠENSTVÍ</a
+    >
+  </div>
 
-    <!-- @media (max-width: 991px) -->
-    <div class="kategorie-container">
-        <button class="kategorie" (click)="toggle()">
-            <span class="material-symbols-outlined kategorie-img" [ngClass]="{changeColor: isDropped}">
-                menu
-            </span>
-            <span>
-                Kategorie
-            </span>
-        </button>
-        <div [ngClass]="{hidden: !isDropped}" class="dropdown-content">
-            <a routerLink="/katalog/dechy" routerLinkActive="active"  class="icon-flex"><span class="img-spacearound"><img src="assets/menu_dechove.png" alt="dech" class="img"></span>DECHOVÉ NÁSTROJE</a>
-            <a routerLink="/katalog/smycce" routerLinkActive="active" class="icon-flex"><span class="img-spacearound"><img src="assets/menu_smyccove.png" alt="smyčec" class="img"></span>SMYČCOVÉ NÁSTROJE</a>
-            <a routerLink="/katalog/strunne" routerLinkActive="active" class="icon-flex"><span class="img-spacearound"><img src="assets/menu_strune-drnkaci.png" alt="strunné" class="img"></span>STRUNNÉ A DRNKACÍ NÁSTROJE</a>
-            <a routerLink="/katalog/klavesove" routerLinkActive="active" class="icon-flex"><span class="img-spacearound"><img src="assets/menu_klavesove.png" alt="klaves" class="img"></span>KLÁVESOVÉ NÁSTROJE</a>
-            <a routerLink="/katalog/bici" routerLinkActive="active" class="icon-flex"><span class="img-spacearound"><img src="assets/menu_bici-perkuse.png" alt="koncertní" class="img"></span>KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a>
-            <a routerLink="/katalog/noty" routerLinkActive="active" class="icon-flex"><span class="img-spacearound"><img src="assets/menu_noty.png" alt="noty" class="img"></span>NOTY PRO HUDEBNÍ NÁSTROJE</a>
-            <a routerLink="/katalog/darky" routerLinkActive="active" class="icon-flex"><span class="img-spacearound"><img src="assets/menu_darky.png" alt="darkove" class="img"></span>DÁRKOVÉ ZBOŽÍ</a>
-            <a routerLink="/katalog/prislusenstvi" routerLinkActive="active" class="icon-flex"><span class="img-spacearound"></span>PŘÍSLUŠENSTVÍ</a>
-        </div>
+  <!-- @media (max-width: 991px) -->
+  <div class="kategorie-container">
+    <button class="kategorie" (click)="toggle()">
+      <span
+        class="material-symbols-outlined kategorie-img"
+        [ngClass]="{ changeColor: isDropped }"
+      >
+        menu
+      </span>
+      <span> Kategorie </span>
+    </button>
+    <div [ngClass]="{ hidden: !isDropped }" class="dropdown-content">
+      <a routerLink="/katalog/dechy" routerLinkActive="active" class="icon-flex"
+        ><span class="img-spacearound"
+          ><img src="assets/menu_dechove.png" alt="dech" class="img" /></span
+        >DECHOVÉ NÁSTROJE</a
+      >
+      <a
+        routerLink="/katalog/smycce"
+        routerLinkActive="active"
+        class="icon-flex"
+        ><span class="img-spacearound"
+          ><img src="assets/menu_smyccove.png" alt="smyčec" class="img" /></span
+        >SMYČCOVÉ NÁSTROJE</a
+      >
+      <a
+        routerLink="/katalog/strunne"
+        routerLinkActive="active"
+        class="icon-flex"
+        ><span class="img-spacearound"
+          ><img
+            src="assets/menu_strune-drnkaci.png"
+            alt="strunné"
+            class="img" /></span
+        >STRUNNÉ A DRNKACÍ NÁSTROJE</a
+      >
+      <a
+        routerLink="/katalog/klavesove"
+        routerLinkActive="active"
+        class="icon-flex"
+        ><span class="img-spacearound"
+          ><img
+            src="assets/menu_klavesove.png"
+            alt="klaves"
+            class="img" /></span
+        >KLÁVESOVÉ NÁSTROJE</a
+      >
+      <a routerLink="/katalog/bici" routerLinkActive="active" class="icon-flex"
+        ><span class="img-spacearound"
+          ><img
+            src="assets/menu_bici-perkuse.png"
+            alt="koncertní"
+            class="img" /></span
+        >KONCERTNÍ BICÍ NÁSTROJE A PERKUSE</a
+      >
+      <a routerLink="/katalog/noty" routerLinkActive="active" class="icon-flex"
+        ><span class="img-spacearound"
+          ><img src="assets/menu_noty.png" alt="noty" class="img" /></span
+        >NOTY PRO HUDEBNÍ NÁSTROJE</a
+      >
+      <a routerLink="/katalog/darky" routerLinkActive="active" class="icon-flex"
+        ><span class="img-spacearound"
+          ><img src="assets/menu_darky.png" alt="darkove" class="img" /></span
+        >DÁRKOVÉ ZBOŽÍ</a
+      >
+      <a
+        routerLink="/katalog/prislusenstvi"
+        routerLinkActive="active"
+        class="icon-flex"
+        ><span class="img-spacearound"></span>PŘÍSLUŠENSTVÍ</a
+      >
     </div>
+  </div>
 </nav>

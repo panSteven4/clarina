@@ -2,16 +2,14 @@
 <form class="container" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <h1>Registrace</h1>
   <div class="group">
-    <span class="group-header">
-      Přihlašovací údaje
-    </span>
-    <hr>
+    <span class="group-header"> Přihlašovací údaje </span>
+    <hr />
     <div class="form">
       <div class="row">
         <label for="login-name">
           Přihlašovací jméno:<span class="compulsory-star">*</span>
         </label>
-        <input type="text" id="login-name" formControlName="nickname">
+        <input type="text" id="login-name" formControlName="nickname" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -24,7 +22,7 @@
         <label for="password">
           Heslo:<span class="compulsory-star">*</span>
         </label>
-        <input type="password" id="password" formControlName="password">
+        <input type="password" id="password" formControlName="password" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -37,7 +35,11 @@
         <label for="confirm_password">
           Heslo znovu:<span class="compulsory-star">*</span>
         </label>
-        <input type="password" id="confirm_password" formControlName="confirm_password">
+        <input
+          type="password"
+          id="confirm_password"
+          formControlName="confirm_password"
+        />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -59,57 +61,56 @@
   <div class="group">
     <div class="dropdown-header" (click)="toggleFirm()">
       <span class="group-header">
-        <span class="material-symbols-outlined"  [ngClass]="{hidden: isDroppedFirm}">arrow_drop_down</span>
-        <span class="material-symbols-outlined"  [ngClass]="{hidden: !isDroppedFirm}">arrow_drop_up</span>
+        <span
+          class="material-symbols-outlined"
+          [ngClass]="{ hidden: isDroppedFirm }"
+          >arrow_drop_down</span
+        >
+        <span
+          class="material-symbols-outlined"
+          [ngClass]="{ hidden: !isDroppedFirm }"
+          >arrow_drop_up</span
+        >
         Údaje o firmě
       </span>
 
-      <span class="dropdown-message">
-        Vyplňtě v případě, že jste firma
-      </span>
+      <span class="dropdown-message"> Vyplňtě v případě, že jste firma </span>
     </div>
-    <hr>
-    <div class="dropdown-container" [ngClass]="{showDropdown1: isDroppedFirm}">
+    <hr />
+    <div
+      class="dropdown-container"
+      [ngClass]="{ showDropdown1: isDroppedFirm }"
+    >
       <div class="form">
-          <div class="row">
-            <label for="firm-name">
-              Název firmy:
-            </label>
-            <input type="text" id="firm-name" formControlName="firm_name">
-          </div>
-          <div class="row">
-            <label for="ic">
-              IČ:
-            </label>
-            <input type="text" id="ic" formControlName="ic">
-          </div>
-          <div class="row">
-            <label for="dic">
-              DIČ:
-            </label>
-            <input type="text" id="dic" formControlName="dic">
-          </div>
+        <div class="row">
+          <label for="firm-name"> Název firmy: </label>
+          <input type="text" id="firm-name" formControlName="firm_name" />
         </div>
+        <div class="row">
+          <label for="ic"> IČ: </label>
+          <input type="text" id="ic" formControlName="ic" />
+        </div>
+        <div class="row">
+          <label for="dic"> DIČ: </label>
+          <input type="text" id="dic" formControlName="dic" />
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="group">
-    <span class="group-header">
-      Kontaktní údaje
-    </span>
-    <hr>
+    <span class="group-header"> Kontaktní údaje </span>
+    <hr />
     <div class="form">
       <div class="row">
-        <label for="title">
-          Titul:
-        </label>
-        <input type="text" id="title" formControlName="title">
+        <label for="title"> Titul: </label>
+        <input type="text" id="title" formControlName="title" />
       </div>
       <div class="row">
         <label for="firstname">
           Jméno:<span class="compulsory-star">*</span>
         </label>
-        <input type="text" id="firstname" formControlName="firstname">
+        <input type="text" id="firstname" formControlName="firstname" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -122,7 +123,7 @@
         <label for="surname">
           Příjmení:<span class="compulsory-star">*</span>
         </label>
-        <input type="text" id="surname" formControlName="surname">
+        <input type="text" id="surname" formControlName="surname" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -135,7 +136,7 @@
         <label for="email">
           Email:<span class="compulsory-star">*</span>
         </label>
-          <input type="text" id="email" formControlName="email">
+        <input type="text" id="email" formControlName="email" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -145,16 +146,14 @@
         </div>
       </div>
       <div class="row">
-        <label for="phone">
-          Telefon:
-        </label>
-        <input type="text" id="phone" formControlName="phone_number">
+        <label for="phone"> Telefon: </label>
+        <input type="text" id="phone" formControlName="phone_number" />
       </div>
       <div class="row">
         <label for="street">
           Ulice<span class="compulsory-star">*</span>
         </label>
-        <input type="text" id="street" formControlName="street">
+        <input type="text" id="street" formControlName="street" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -164,10 +163,8 @@
         </div>
       </div>
       <div class="row">
-        <label for="city">
-          Město<span class="compulsory-star">*</span>
-        </label>
-        <input type="text" id="city" formControlName="city">
+        <label for="city"> Město<span class="compulsory-star">*</span> </label>
+        <input type="text" id="city" formControlName="city" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -177,10 +174,8 @@
         </div>
       </div>
       <div class="row">
-        <label for="psc">
-          PSČ:<span class="compulsory-star">*</span>
-        </label>
-        <input type="text" id="psc" formControlName="psc">
+        <label for="psc"> PSČ:<span class="compulsory-star">*</span> </label>
+        <input type="text" id="psc" formControlName="psc" />
       </div>
       <div class="small-row">
         <div class="small-row-invisible-label"></div>
@@ -190,38 +185,41 @@
         </div>
       </div>
       <div class="row">
-        <label for="state">
-          Stát:
-        </label>
-        <select name="state" id="state" class="custom-select" formControlName="state">
+        <label for="state"> Stát: </label>
+        <select
+          name="state"
+          id="state"
+          class="custom-select"
+          formControlName="state"
+        >
           <option value="cz" selected="selected">Česká republika</option>
-          <option value="sk" >Slovensko</option>
-          <option value="de" >Německo</option>
-          <option value="be" >Belgie</option>
-          <option value="bg" >Bulharsko</option>
-          <option value="dk" >Dánsko</option>
-          <option value="ee" >Estonsko</option>
-          <option value="fi" >Finsko</option>
-          <option value="fr" >Francie</option>
-          <option value="hr" >Chorvatsko</option>
-          <option value="ie" >Irsko</option>
-          <option value="it" >Itálie</option>
-          <option value="cy" >Kypr</option>
-          <option value="lt" >Litva</option>
-          <option value="lv" >Lotyšsko</option>
-          <option value="lu" >Lucembursko</option>
-          <option value="hu" >Maďarsko</option>
-          <option value="mt" >Malta</option>
-          <option value="nl" >Nizozemsko</option>
-          <option value="pl" >Polsko</option>
-          <option value="pt" >Portugalsko</option>
-          <option value="at" >Rakousko</option>
-          <option value="ro" >Rumunsko</option>
-          <option value="gr" >Řecko</option>
-          <option value="si" >Slovinsko</option>
-          <option value="gb" >Spojené království</option>
-          <option value="es" >Španělsko</option>
-          <option value="se" >Švédsko</option>
+          <option value="sk">Slovensko</option>
+          <option value="de">Německo</option>
+          <option value="be">Belgie</option>
+          <option value="bg">Bulharsko</option>
+          <option value="dk">Dánsko</option>
+          <option value="ee">Estonsko</option>
+          <option value="fi">Finsko</option>
+          <option value="fr">Francie</option>
+          <option value="hr">Chorvatsko</option>
+          <option value="ie">Irsko</option>
+          <option value="it">Itálie</option>
+          <option value="cy">Kypr</option>
+          <option value="lt">Litva</option>
+          <option value="lv">Lotyšsko</option>
+          <option value="lu">Lucembursko</option>
+          <option value="hu">Maďarsko</option>
+          <option value="mt">Malta</option>
+          <option value="nl">Nizozemsko</option>
+          <option value="pl">Polsko</option>
+          <option value="pt">Portugalsko</option>
+          <option value="at">Rakousko</option>
+          <option value="ro">Rumunsko</option>
+          <option value="gr">Řecko</option>
+          <option value="si">Slovinsko</option>
+          <option value="gb">Spojené království</option>
+          <option value="es">Španělsko</option>
+          <option value="se">Švédsko</option>
         </select>
       </div>
     </div>
@@ -230,74 +228,94 @@
   <div class="group">
     <div class="dropdown-header" (click)="toggleAddress()">
       <span class="group-header">
-        <span class="material-symbols-outlined"  [ngClass]="{hidden: isDroppedAddress}">arrow_drop_down</span>
-        <span class="material-symbols-outlined"  [ngClass]="{hidden: !isDroppedAddress}">arrow_drop_up</span>
+        <span
+          class="material-symbols-outlined"
+          [ngClass]="{ hidden: isDroppedAddress }"
+          >arrow_drop_down</span
+        >
+        <span
+          class="material-symbols-outlined"
+          [ngClass]="{ hidden: !isDroppedAddress }"
+          >arrow_drop_up</span
+        >
         Doručovací adresa
       </span>
-       <span class="dropdown-message">
+      <span class="dropdown-message">
         Vyplňte v případě, že se doručovací adresa liší od kontaktní.
       </span>
     </div>
-    <hr>
-    <div class="dropdown-container" [ngClass]="{showDropdown2: isDroppedAddress}">
+    <hr />
+    <div
+      class="dropdown-container"
+      [ngClass]="{ showDropdown2: isDroppedAddress }"
+    >
       <div class="form">
         <div class="row">
           <label for="name-or-firm-name">
             Jméno a příjmení (popř. firma):
           </label>
-          <input type="text" id="name-or-firm-name" formControlName="name_or_firm_name">
+          <input
+            type="text"
+            id="name-or-firm-name"
+            formControlName="name_or_firm_name"
+          />
         </div>
         <div class="row">
-          <label for="delivery_street">
-            Ulice:
-          </label>
-          <input type="text" id="delivery_street" formControlName="delivery_street">
+          <label for="delivery_street"> Ulice: </label>
+          <input
+            type="text"
+            id="delivery_street"
+            formControlName="delivery_street"
+          />
         </div>
         <div class="row">
-          <label for="delivery_city">
-            Město
-          </label>
-          <input type="text" id="delivery_city" formControlName="delivery_city">
+          <label for="delivery_city"> Město </label>
+          <input
+            type="text"
+            id="delivery_city"
+            formControlName="delivery_city"
+          />
         </div>
         <div class="row">
-          <label for="delivery_psc">
-            PSČ:
-          </label>
-          <input type="text" id="delivery_psc" formControlName="delivery_psc">
+          <label for="delivery_psc"> PSČ: </label>
+          <input type="text" id="delivery_psc" formControlName="delivery_psc" />
         </div>
         <div class="row">
-          <label for="delivery_state">
-            Stát:
-          </label>
-          <select name="state-select-2" id="delivery_state" class="custom-select" formControlName="delivery_state">
+          <label for="delivery_state"> Stát: </label>
+          <select
+            name="state-select-2"
+            id="delivery_state"
+            class="custom-select"
+            formControlName="delivery_state"
+          >
             <option value="cz" selected="selected">Česká republika</option>
-            <option value="sk" >Slovensko</option>
-            <option value="de" >Německo</option>
-            <option value="be" >Belgie</option>
-            <option value="bg" >Bulharsko</option>
-            <option value="dk" >Dánsko</option>
-            <option value="ee" >Estonsko</option>
-            <option value="fi" >Finsko</option>
-            <option value="fr" >Francie</option>
-            <option value="hr" >Chorvatsko</option>
-            <option value="ie" >Irsko</option>
-            <option value="it" >Itálie</option>
-            <option value="cy" >Kypr</option>
-            <option value="lt" >Litva</option>
-            <option value="lv" >Lotyšsko</option>
-            <option value="lu" >Lucembursko</option>
-            <option value="hu" >Maďarsko</option>
-            <option value="mt" >Malta</option>
-            <option value="nl" >Nizozemsko</option>
-            <option value="pl" >Polsko</option>
-            <option value="pt" >Portugalsko</option>
-            <option value="at" >Rakousko</option>
-            <option value="ro" >Rumunsko</option>
-            <option value="gr" >Řecko</option>
-            <option value="si" >Slovinsko</option>
-            <option value="gb" >Spojené království</option>
-            <option value="es" >Španělsko</option>
-            <option value="se" >Švédsko</option>
+            <option value="sk">Slovensko</option>
+            <option value="de">Německo</option>
+            <option value="be">Belgie</option>
+            <option value="bg">Bulharsko</option>
+            <option value="dk">Dánsko</option>
+            <option value="ee">Estonsko</option>
+            <option value="fi">Finsko</option>
+            <option value="fr">Francie</option>
+            <option value="hr">Chorvatsko</option>
+            <option value="ie">Irsko</option>
+            <option value="it">Itálie</option>
+            <option value="cy">Kypr</option>
+            <option value="lt">Litva</option>
+            <option value="lv">Lotyšsko</option>
+            <option value="lu">Lucembursko</option>
+            <option value="hu">Maďarsko</option>
+            <option value="mt">Malta</option>
+            <option value="nl">Nizozemsko</option>
+            <option value="pl">Polsko</option>
+            <option value="pt">Portugalsko</option>
+            <option value="at">Rakousko</option>
+            <option value="ro">Rumunsko</option>
+            <option value="gr">Řecko</option>
+            <option value="si">Slovinsko</option>
+            <option value="gb">Spojené království</option>
+            <option value="es">Španělsko</option>
+            <option value="se">Švédsko</option>
           </select>
         </div>
       </div>
@@ -306,12 +324,8 @@
 
   <div class="submit-section">
     <button type="submit" [disabled]="!profileForm.valid" class="submit-btn">
-      <span class="material-symbols-outlined btn-checkmark">
-        check
-      </span>
-      <span class="submit-btn-text">
-        Dokončit registraci
-      </span>
+      <span class="material-symbols-outlined btn-checkmark"> check </span>
+      <span class="submit-btn-text"> Dokončit registraci </span>
     </button>
   </div>
 </form>

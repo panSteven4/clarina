@@ -1,6 +1,5 @@
-export interface CategoryModel{
-    name: string,
-    imagePath: string,
-    subCategory: string
-
+export interface CategoryModel {
+  name: string;
+  imagePath: string;
+  subCategory: string;
 }

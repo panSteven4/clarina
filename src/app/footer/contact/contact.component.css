@@ -1,13 +1,13 @@
 .container {
   display: flex;
-  background-color: #AE1D39;
+  background-color: #ae1d39;
   color: white;
   justify-content: center;
 }
 
 .map {
- margin-left: -270px;
- padding-right: 25px;
+  margin-left: -270px;
+  padding-right: 25px;
 }
 
 .map-img {
@@ -50,18 +50,17 @@
 }
 
 .email-btn {
-  display:flex;
+  display: flex;
   background-color: white;
   padding: 13px;
   border-radius: 50%;
-  position:absolute;
+  position: absolute;
   right: 0;
   aspect-ratio: 1;
-
 }
 
 .orders {
-  line-height: 22px
+  line-height: 22px;
 }
 
 h3 {
@@ -81,23 +80,24 @@ table {
   margin-right: auto;
 }
 
-table th, table td {
+table th,
+table td {
   padding: 12px 15px;
 }
 
-.email-btn:hover{
+.email-btn:hover {
   color: var(--main-red);
   cursor: pointer;
 }
 
-@media screen and (max-width: 1270px){
+@media screen and (max-width: 1270px) {
   .map {
-    display:none;
+    display: none;
   }
 }
 
-@media screen and (max-width: 800px){
-  .container{
+@media screen and (max-width: 800px) {
+  .container {
     flex-direction: column;
   }
 
@@ -106,7 +106,6 @@ table th, table td {
     padding: unset;
     width: 100%;
     text-align: center;
-
   }
 
   table {
@@ -121,6 +120,5 @@ table th, table td {
     padding-bottom: 30px;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     min-width: 280px;
-
   }
 }

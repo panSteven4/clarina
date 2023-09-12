@@ -4,8 +4,8 @@ import { CanDeactivateFn } from '@angular/router';
 import { leaveGuard } from './leave.guard';
 
 describe('leaveGuard', () => {
-  const executeGuard: CanDeactivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => leaveGuard(...guardParameters));
+  const executeGuard: CanDeactivateFn = (...guardParameters) =>
+    TestBed.runInInjectionContext(() => leaveGuard(...guardParameters));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

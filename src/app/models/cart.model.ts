@@ -1,7 +1,7 @@
 export interface Slide {
-    name: string;
-    title: string;
-    description: string;
-    imagePath: string;
-    moreButtonLink: string;
+  name: string;
+  title: string;
+  description: string;
+  imagePath: string;
+  moreButtonLink: string;
 }

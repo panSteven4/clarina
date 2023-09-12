@@ -8,7 +8,7 @@ describe('ImagePresentationComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ImagePresentationComponent]
+      declarations: [ImagePresentationComponent],
     });
     fixture = TestBed.createComponent(ImagePresentationComponent);
     component = fixture.componentInstance;

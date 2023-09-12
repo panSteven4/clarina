@@ -8,7 +8,7 @@ describe('SmycceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SmycceComponent]
+      declarations: [SmycceComponent],
     });
     fixture = TestBed.createComponent(SmycceComponent);
     component = fixture.componentInstance;

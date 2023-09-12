@@ -1,17 +1,25 @@
-<a class="anchor-cont" [class.pointer]="isHovered" (mouseover)="onHover()" (mouseout)="onHoverEnd()">
+<a
+  class="anchor-cont"
+  [class.pointer]="isHovered"
+  (mouseover)="onHover()"
+  (mouseout)="onHoverEnd()"
+>
   <div *ngIf="product" class="col">
-      <div class="row img">
-          <img src="{{product.image_paths[0]}}" alt="clarinet-buffet crampon">
-      </div>
-      <div class="row title" [class.highlight-text]="isHovered">
-          {{product.name}}
-      </div>
-      <div class="row">
-        <button class="cart-btn" [class.highlight-btn]="isHovered">
-          <span class="space-right">{{product.price | currency: 'CZK':'symbol':'1.0-0'}} vč. DPH</span>
-          <span class="material-symbols-outlined">shopping_cart</span>
-        </button>
-      </div>
+    <div class="row img">
+      <img src="{{ product.image_paths[0] }}" alt="clarinet-buffet crampon" />
+    </div>
+    <div class="row title" [class.highlight-text]="isHovered">
+      {{ product.name }}
+    </div>
+    <div class="row">
+      <button class="cart-btn" [class.highlight-btn]="isHovered">
+        <span class="space-right"
+          >{{ product.price | currency: "CZK" : "symbol" : "1.0-0" }} vč.
+          DPH</span
+        >
+        <span class="material-symbols-outlined">shopping_cart</span>
+      </button>
+    </div>
 
     <ng-container [ngSwitch]="product.available">
       <div *ngSwitchCase="ProductAvailabilityEnum.Available" class="available">
@@ -26,4 +34,3 @@
     </ng-container>
   </div>
 </a>
-

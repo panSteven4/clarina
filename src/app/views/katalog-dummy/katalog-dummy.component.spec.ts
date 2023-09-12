@@ -8,7 +8,7 @@ describe('KatalogDummyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [KatalogDummyComponent]
+      declarations: [KatalogDummyComponent],
     });
     fixture = TestBed.createComponent(KatalogDummyComponent);
     component = fixture.componentInstance;

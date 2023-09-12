@@ -1,6 +1,9 @@
 <div class="container">
   <div *ngFor="let product of products" class="grid-item">
-    <app-product [product] = product [routerLink]="['/katalog', product.id]"></app-product>
+    <app-product
+      [product]="product"
+      [routerLink]="['/katalog', product.id]"
+    ></app-product>
   </div>
 </div>
 

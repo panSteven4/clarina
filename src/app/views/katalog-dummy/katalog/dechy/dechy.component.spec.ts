@@ -8,7 +8,7 @@ describe('DechyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DechyComponent]
+      declarations: [DechyComponent],
     });
     fixture = TestBed.createComponent(DechyComponent);
     component = fixture.componentInstance;

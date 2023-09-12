@@ -70,7 +70,7 @@
   pointer-events: none;
 }
 
-input[type="range"]::-webkit-slider-thumb{
+input[type="range"]::-webkit-slider-thumb {
   height: 17px;
   width: 17px;
   -webkit-appearance: none;
@@ -125,11 +125,11 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 .checkbox-label:hover input ~ .checkmark {
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
 }
 
 .checkbox-label input:checked ~ .checkmark {
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
 }
 
 .checkmark:after {
@@ -168,16 +168,17 @@ input[type="range"]::-webkit-slider-thumb{
 .show-link a {
   box-shadow: inset 0 0 0 0 var(--main-red);
   color: black;
-  margin: 0 -.25rem;
+  margin: 0 -0.25rem;
   padding: 5px 10px;
-  transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.4s ease-in-out;
   border-radius: 30px;
 }
 .show-link a:hover {
   box-shadow: inset 155px 0 0 0 var(--main-red);
   color: white;
   cursor: pointer;
-
 }
 /*TODO active class for these links*/
 
@@ -220,7 +221,7 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 .dropdown-content a:hover {
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
 }
 
 .hidden {
@@ -237,7 +238,7 @@ input[type="range"]::-webkit-slider-thumb{
   padding: 7px 10px;
   background-color: #f3f3f3;
   border-radius: 3px;
-  color: #707070
+  color: #707070;
 }
 
 .number-page-container a:hover {
@@ -294,5 +295,3 @@ input[type="range"]::-webkit-slider-thumb{
     right: 0;
   }
 }
-
-

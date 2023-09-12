@@ -1,668 +1,679 @@
-import {Injectable} from '@angular/core';
-import {ProductAvailabilityEnum, ProductModel, ProductPricePerEnum} from "../models/product.model";
-import {ProductDetailComponent} from "../content/product-list/product-detail/product-detail.component";
+import { Injectable } from '@angular/core';
+import {
+  ProductAvailabilityEnum,
+  ProductModel,
+  ProductPricePerEnum,
+} from '../models/product.model';
+import { ProductDetailComponent } from '../content/product-list/product-detail/product-detail.component';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductGeneratorService {
   lastID = 0;
   products: ProductModel[] = [];
   private readonly imagePaths: string[] = [
-    "assets/instruments/1.jpg",
-    "assets/instruments/2.jpg",
-    "assets/instruments/3.jpg",
-    "assets/instruments/4.jpg",
-    "assets/instruments/5.jpg",
-    "assets/instruments/6.jpg",
-    "assets/instruments/7.png",
-    "assets/instruments/8.jpg",
-    "assets/instruments/9.jpg",
-    "assets/instruments/10.jpg",
-    "assets/instruments/11.jpg",
-    "assets/instruments/12.jpg",
-    "assets/instruments/13.jpg",
-    "assets/instruments/14.png",
-    "assets/instruments/15.jpg",
-    "assets/instruments/16.jpg",
-    "assets/instruments/17.jpg",
-    "assets/instruments/18.jpg",
-    "assets/instruments/19.jpg",
-    "assets/instruments/20.jpg",
-    "assets/instruments/21.jpg",
-    "assets/instruments/22.jpg",
-    "assets/instruments/23.jpg"
-  ]
+    'assets/instruments/1.jpg',
+    'assets/instruments/2.jpg',
+    'assets/instruments/3.jpg',
+    'assets/instruments/4.jpg',
+    'assets/instruments/5.jpg',
+    'assets/instruments/6.jpg',
+    'assets/instruments/7.png',
+    'assets/instruments/8.jpg',
+    'assets/instruments/9.jpg',
+    'assets/instruments/10.jpg',
+    'assets/instruments/11.jpg',
+    'assets/instruments/12.jpg',
+    'assets/instruments/13.jpg',
+    'assets/instruments/14.png',
+    'assets/instruments/15.jpg',
+    'assets/instruments/16.jpg',
+    'assets/instruments/17.jpg',
+    'assets/instruments/18.jpg',
+    'assets/instruments/19.jpg',
+    'assets/instruments/20.jpg',
+    'assets/instruments/21.jpg',
+    'assets/instruments/22.jpg',
+    'assets/instruments/23.jpg',
+  ];
 
-  private readonly  categories = {
-    "Katalog": {
-      "Dechové nástroje": {
-        "Dřevěné": {
-          "Zobcové flétny": {
-            "Sopraninové": {
+  private readonly categories = {
+    Katalog: {
+      'Dechové nástroje': {
+        Dřevěné: {
+          'Zobcové flétny': {
+            Sopraninové: {
               // bedrock
             },
-            "Sopránové": {
+            Sopránové: {
               // bedrock
             },
-            "Altové": {
+            Altové: {
               // bedrock
             },
-            "Tenorové": {
+            Tenorové: {
               // bedrock
             },
-            "Basové": {
+            Basové: {
               // bedrock
             },
-            "Ostatní zobcové flétny": {
+            'Ostatní zobcové flétny': {
               // bedrock
-            }
+            },
           },
-          "Příčné flétny": {
-            "Uzavřené klapky": {
+          'Příčné flétny': {
+            'Uzavřené klapky': {
               // bedrock
             },
-            "Otevřené klapky (French)": {
+            'Otevřené klapky (French)': {
               // bedrock
             },
-            "Pikoly": {
+            Pikoly: {
               // bedrock
             },
-            "Altové a basové": {
+            'Altové a basové': {
               // bedrock
-            }
+            },
           },
-          "Klarinety": {
-            "Es klarinety": {
+          Klarinety: {
+            'Es klarinety': {
               // bedrock
             },
-            "B klarinety": {
+            'B klarinety': {
               // bedrock
             },
-            "A klarinety": {
+            'A klarinety': {
               // bedrock
             },
-            "Ostatní klarinety": {
+            'Ostatní klarinety': {
               // bedrock
             },
-            "Soudky": {
+            Soudky: {
               // bedrock
             },
-            "Korpusy": {
+            Korpusy: {
               // bedrock
-            }
+            },
           },
-          "Saxofony": {
-            "Sopránové": {
+          Saxofony: {
+            Sopránové: {
               // bedrock
             },
-            "Altové": {
+            Altové: {
               // bedrock
             },
-            "Tenorové": {
+            Tenorové: {
               // bedrock
             },
-            "Barytonové": {
+            Barytonové: {
               // bedrock
             },
-            "Ostatní saxofony": {
+            'Ostatní saxofony': {
               // bedrock
             },
-            "popruhy pro saxofony": {
+            'popruhy pro saxofony': {
               // bedrock
-            }
+            },
           },
-          "Hoboje": {
-            "Poloautomatické": {
+          Hoboje: {
+            Poloautomatické: {
               // bedrock
             },
-            "Automatické": {
+            Automatické: {
               // bedrock
-            }
+            },
           },
-          "Fagoty": {
+          Fagoty: {
             // bedrock
           },
-          "Hubičky na dřevěné nástroje": {
-            "Pro Es klarinety": {
+          'Hubičky na dřevěné nástroje': {
+            'Pro Es klarinety': {
               // bedrock
             },
-            "Pro B klarinety": {
+            'Pro B klarinety': {
               // bedrock
             },
-            "Pro altklarinety": {
+            'Pro altklarinety': {
               // bedrock
             },
-            "Pro basklarinety": {
+            'Pro basklarinety': {
               // bedrock
             },
-            "Pro soprán saxofon - kaučuk": {
+            'Pro soprán saxofon - kaučuk': {
               // bedrock
             },
-            "Pro soprán saxofony - kov": {
+            'Pro soprán saxofony - kov': {
               // bedrock
             },
-            "Pro alt saxofony - kaučuk": {
+            'Pro alt saxofony - kaučuk': {
               // bedrock
             },
-            "Pro alt saxofony - kov": {
+            'Pro alt saxofony - kov': {
               // bedrock
             },
-            "Pro tenor saxofony - kaučuk": {
+            'Pro tenor saxofony - kaučuk': {
               // bedrock
             },
-            "Pro tenor saxofony - kov": {
+            'Pro tenor saxofony - kov': {
               // bedrock
             },
-            "Pro baryton saxofony - kaučuk": {
+            'Pro baryton saxofony - kaučuk': {
               // bedrock
             },
-            "Pro baryton saxofony - kov": {
+            'Pro baryton saxofony - kov': {
               // bedrock
             },
-            "Pro bassaxofony- kov": {
+            'Pro bassaxofony- kov': {
               // bedrock
             },
-            "Pro ostatní dřevěné nástroje": {
+            'Pro ostatní dřevěné nástroje': {
               // bedrock
-            }
+            },
           },
-          "Ligatury a kloboučky": {
+          'Ligatury a kloboučky': {
             // bedrock
           },
-          "Plátky a strojky": {
-            "Plátky pro Es klarinety": {
+          'Plátky a strojky': {
+            'Plátky pro Es klarinety': {
               // bedrock
             },
-            "Plátky pro B klarinety": {
+            'Plátky pro B klarinety': {
               // bedrock
             },
-            "Plátky pro basklarinety": {
+            'Plátky pro basklarinety': {
               // bedrock
             },
-            "Plátky pro soprán soxofony": {
+            'Plátky pro soprán soxofony': {
               // bedrock
             },
-            "Plátky pro alt saxofony": {
+            'Plátky pro alt saxofony': {
               // bedrock
             },
-            "Plátky pro tenor saxofony": {
+            'Plátky pro tenor saxofony': {
               // bedrock
             },
-            "Plátky pro baryton saxofony": {
+            'Plátky pro baryton saxofony': {
               // bedrock
             },
-            "Příslušenství pro plátky a strojky": {
+            'Příslušenství pro plátky a strojky': {
               // bedrock
             },
-            "Plátky pro ostatní jednoplátkové nástroje": {
+            'Plátky pro ostatní jednoplátkové nástroje': {
               // bedrock
             },
-            "Strojky pro hoboje a fagoty": {
+            'Strojky pro hoboje a fagoty': {
               // bedrock
-            }
+            },
           },
-          "Příslušenství pro dřevěné dechové nástroje": {
-            "Příslušenství pro hoboje": {
+          'Příslušenství pro dřevěné dechové nástroje': {
+            'Příslušenství pro hoboje': {
               // bedrock
             },
-            "Příslušenství pro saxofony": {
+            'Příslušenství pro saxofony': {
               // bedrock
             },
-            "Příslušenství pro klarinety": {
+            'Příslušenství pro klarinety': {
               // bedrock
             },
-            "Pomůcky na cvičení": {
+            'Pomůcky na cvičení': {
               // bedrock
             },
-            "Příslušenství pro zobcové flétny": {
+            'Příslušenství pro zobcové flétny': {
               // bedrock
             },
-            "Příslušenství pro příčné flétny": {
+            'Příslušenství pro příčné flétny': {
               // bedrock
             },
-            "Příslušenství pro fagoty a kontrafagoty": {
+            'Příslušenství pro fagoty a kontrafagoty': {
               // bedrock
-            }
+            },
           },
-          "Pouzdra pro dřevěné dechové nástroje": {
-            "Pouzdra pro saxofony": {
+          'Pouzdra pro dřevěné dechové nástroje': {
+            'Pouzdra pro saxofony': {
               // bedrock
             },
-            "Pouzdra pro příčné flétny": {
+            'Pouzdra pro příčné flétny': {
               // bedrock
             },
-            "Pouzdra pro klarinety": {
+            'Pouzdra pro klarinety': {
               // bedrock
             },
-            "Pouzdra pro hoboje a anglické rohy": {
+            'Pouzdra pro hoboje a anglické rohy': {
               // bedrock
             },
-            "Pouzdra pro zobcové flétny": {
+            'Pouzdra pro zobcové flétny': {
               // bedrock
-            }
-          }
+            },
+          },
         },
-        "Žesťové": {
-          "Trubky": {
+        Žesťové: {
+          Trubky: {
             // fakebedrock
           },
-          "Křídlovky": {
+          Křídlovky: {
             // fakebedrock
           },
-          "Trombony": {
+          Trombony: {
             // fakebedrock
           },
-          "Lesní rohy": {
+          'Lesní rohy': {
             // fakebedrock
           },
-          "Tuby": {
-            "B tuby": {
+          Tuby: {
+            'B tuby': {
               // bedrock
             },
-            "F tuby": {
+            'F tuby': {
               // bedrock
             },
-            "C tuby": {
+            'C tuby': {
               // bedrock
             },
-            "Es tuby": {
+            'Es tuby': {
               // bedrock
-            }
+            },
           },
-          "Tenory": {
+          Tenory: {
             // bedrock
           },
-          "Barytony": {
+          Barytony: {
             // bedrock
           },
-          "Dusítka": {
-            "Pro trubky": {
+          Dusítka: {
+            'Pro trubky': {
               // bedrock
             },
-            "Pro křídlovky": {
+            'Pro křídlovky': {
               // bedrock
             },
-            "Pro lesní rohy": {
+            'Pro lesní rohy': {
               // bedrock
             },
-            "Pro trombony": {
+            'Pro trombony': {
               // bedrock
             },
-            "Pro tuby": {
+            'Pro tuby': {
               // bedrock
             },
-            "Ostatní": {
+            Ostatní: {
               // bedrock
-            }
-          }
+            },
+          },
         },
-        "Ostatní dřevěné dechové nástroje": {
+        'Ostatní dřevěné dechové nástroje': {
           // fakebedrock
-        }
+        },
       },
-      "Smyčcové nástroje": {
-        "Struny": {
+      'Smyčcové nástroje': {
+        Struny: {
           // fakebedrock
         },
-        "Pouzdra a povlaky": {
+        'Pouzdra a povlaky': {
           // fakebedrock
         },
-        "Smyčce": {
-          "Smyčce pro housle": {
+        Smyčce: {
+          'Smyčce pro housle': {
             // bedrock
           },
-          "Smyčce pro violu": {
+          'Smyčce pro violu': {
             // bedrock
           },
-          "Smyčce pro violoncello": {
+          'Smyčce pro violoncello': {
             // bedrock
           },
-          "Smyčce pro kontrabas": {
+          'Smyčce pro kontrabas': {
             // bedrock
           },
-          "Smyčce pro historické nástroje": {
+          'Smyčce pro historické nástroje': {
             // bedrock
-          }
+          },
         },
-        "Příslušenství pro smyčcové nástroje": {
+        'Příslušenství pro smyčcové nástroje': {
           // fakebedrock
         },
-        "Housle": {
-          "Klasické housle": {
+        Housle: {
+          'Klasické housle': {
             // bedrock
           },
-          "Elektrické housle": {
+          'Elektrické housle': {
             // bedrock
           },
-          "Příslušenství pro housle": {
+          'Příslušenství pro housle': {
             // bedrock
-          }
+          },
         },
-        "Violy": {
+        Violy: {
           // bedrock
         },
-        "Violoncella": {
+        Violoncella: {
           // bedrock
         },
-        "Kontrabasy": {
+        Kontrabasy: {
           // bedrock
-        }
+        },
       },
-      "Strunné a drnkací nástroje": {
-        "Koncertní kytary": {
+      'Strunné a drnkací nástroje': {
+        'Koncertní kytary': {
           // bedrock
         },
-        "Westernové kytary": {
+        'Westernové kytary': {
           // bedrock
         },
-        "Ukulele": {
+        Ukulele: {
           // bedrock
         },
-        "Harfy": {
+        Harfy: {
           // bedrock
         },
-        "Elektrické kytary": {
+        'Elektrické kytary': {
           // bedrock
         },
-        "Struny na kytary a ukulele": {
+        'Struny na kytary a ukulele': {
           // bedrock
         },
-        "Struny na harfu": {
-          "Sady strun na harfu": {
+        'Struny na harfu': {
+          'Sady strun na harfu': {
             // bedrock
           },
-          "Jednotlivé struny na harfu": {
+          'Jednotlivé struny na harfu': {
             // bedrock
-          }
+          },
         },
-        "Ostatní strunné a drnkací nástroje": {
+        'Ostatní strunné a drnkací nástroje': {
           // bedrock
         },
-        "Příslušenství pro strunné a drnakcí nástroje": {
-          "Příslušenství pro strunné a drnkací nástroje": {
+        'Příslušenství pro strunné a drnakcí nástroje': {
+          'Příslušenství pro strunné a drnkací nástroje': {
             // bedrock
           },
-          "Příslušenství pro koncertní kytary": {
+          'Příslušenství pro koncertní kytary': {
             // bedrock
           },
-          "Příslušenství pro westernové kytary": {
+          'Příslušenství pro westernové kytary': {
             // bedrock
           },
-          "Příslušenství pro harfy": {
+          'Příslušenství pro harfy': {
             // bedrock
           },
-          "Příslušenství pro ostatní strunné nástroje": {
+          'Příslušenství pro ostatní strunné nástroje': {
             // bedrock
-          }
-        }
+          },
+        },
       },
-      "Klávesové nástroje": {
-        "Pianina": {
+      'Klávesové nástroje': {
+        Pianina: {
           // bedrock
         },
-        "Křídla": {
+        Křídla: {
           // bedrock
         },
-        "Digitální piána": {
+        'Digitální piána': {
           // bedrock
         },
-        "Stage piána": {
+        'Stage piána': {
           // bedrock
         },
-        "Keyboardy / klávesy": {
+        'Keyboardy / klávesy': {
           // bedrock
         },
-        "Masterkeyboardy / MIDI klaviatury": {
+        'Masterkeyboardy / MIDI klaviatury': {
           // bedrock
         },
-        "Syntezátroy": {
+        Syntezátroy: {
           // bedrock
         },
-        "Akordeony": {
+        Akordeony: {
           // bedrock
         },
-        "Příslušenství": {
-          "Příslušenství pro pianina": {
+        Příslušenství: {
+          'Příslušenství pro pianina': {
             // bedrock
           },
-          "Příslušenství pro křídla": {
+          'Příslušenství pro křídla': {
             // bedrock
           },
-          "Příslušenství pro digitální piána": {
+          'Příslušenství pro digitální piána': {
             // bedrock
           },
-          "Příslušenství pro stage piana": {
+          'Příslušenství pro stage piana': {
             // bedrock
           },
-          "Příslušenství pro keyboardy/klávesy": {
+          'Příslušenství pro keyboardy/klávesy': {
             // bedrock
           },
-          "Příslušenství pro akordeony": {
+          'Příslušenství pro akordeony': {
             // bedrock
-          }
-        }
-      } ,
-      "Koncertní bicí nástroje a perkuse": {
-        "Orchestrální bicí nástroje": {
-          "Melodické": {
-            "Marimby": {
-              // bedrock
-            },
-            "Vibrafony": {
-              // bedrock
-            },
-            "Xylofony": {
-              // bedrock
-            },
-            "Zvonkohry": {
-              // bedrock
-            },
-            "Zvony": {
-              // bedrock
-            }
           },
-          "Rytmické": {
-            // fakebedrock
-          }
         },
-        "Bicí soupravy a jednotlivé bubny": {
-          // bedrock
-        },
-        "Elektronické bicí": {
-          // bedrock
-        },
-        "Perkuse": {
-          "Africké perkuse": {
-            // bedrock
-          },
-          "Latinskoamerické perkuse": {
-            // bedrock
-          },
-          "Tamburiny": {
-            // bedrock
-          },
-          "Cajony": {
-            // bedrock
-          },
-          "Rámové bubny": {
-            // bedrock
-          },
-          "Efektové a netradiční perkuse": {
-            // bedrock
-          }
-        },
-        "Činely": {
-          "Orchestrální činely": {
-            // bedrock
-          }
-        },
-        "Orffovy nástroje": {
-          // bedrock
-        },
-        "Blány": {
-          // fakebedrock
-        },
-        "Paličky": {
-          // bedrock
-        },
-        "Hardware": {
-          // bedrock
-        },
-        "Příslušenství, obaly, kufry": {
-          // fakebedrock
-        }
       },
-      "Noty pro hudební nástroje": {
-        "Vokální soubory & sbory": {
-          "Smíšený sbor": {
-            "satb": {
+      'Koncertní bicí nástroje a perkuse': {
+        'Orchestrální bicí nástroje': {
+          Melodické: {
+            Marimby: {
               // bedrock
             },
-            "sab": {
+            Vibrafony: {
               // bedrock
             },
-            "ssb": {
+            Xylofony: {
               // bedrock
             },
-            "ssab": {
+            Zvonkohry: {
               // bedrock
             },
-            "ssatb": {
+            Zvony: {
               // bedrock
-            }
+            },
           },
-          "Ženský sbor": {
+          Rytmické: {
             // fakebedrock
           },
-          "X-part mix": {
-            // fakebedrock
-          },
-          "Mužský sbor": {
-            // fakebedrock
-          },
-          "Dětský sbor": {
+        },
+        'Bicí soupravy a jednotlivé bubny': {
+          // bedrock
+        },
+        'Elektronické bicí': {
+          // bedrock
+        },
+        Perkuse: {
+          'Africké perkuse': {
             // bedrock
-          }
+          },
+          'Latinskoamerické perkuse': {
+            // bedrock
+          },
+          Tamburiny: {
+            // bedrock
+          },
+          Cajony: {
+            // bedrock
+          },
+          'Rámové bubny': {
+            // bedrock
+          },
+          'Efektové a netradiční perkuse': {
+            // bedrock
+          },
         },
-        "Noty pro kytaru": {
+        Činely: {
+          'Orchestrální činely': {
+            // bedrock
+          },
+        },
+        'Orffovy nástroje': {
+          // bedrock
+        },
+        Blány: {
           // fakebedrock
         },
-        "Noty pro altový saxofon": {
+        Paličky: {
+          // bedrock
+        },
+        Hardware: {
+          // bedrock
+        },
+        'Příslušenství, obaly, kufry': {
           // fakebedrock
         },
-        "Orchestr": {
-          // fakebedrock
-        },
-        "Klavír sólo": {
-          // fakebedrock
-        },
-        "Noty pro trumpetu": {
-          // fakebedrock
-        },
-        "Zpěvníky": {
-          // fakebedrock
-        }
       },
-      "Dárkové zboží": {
+      'Noty pro hudební nástroje': {
+        'Vokální soubory & sbory': {
+          'Smíšený sbor': {
+            satb: {
+              // bedrock
+            },
+            sab: {
+              // bedrock
+            },
+            ssb: {
+              // bedrock
+            },
+            ssab: {
+              // bedrock
+            },
+            ssatb: {
+              // bedrock
+            },
+          },
+          'Ženský sbor': {
+            // fakebedrock
+          },
+          'X-part mix': {
+            // fakebedrock
+          },
+          'Mužský sbor': {
+            // fakebedrock
+          },
+          'Dětský sbor': {
+            // bedrock
+          },
+        },
+        'Noty pro kytaru': {
+          // fakebedrock
+        },
+        'Noty pro altový saxofon': {
+          // fakebedrock
+        },
+        Orchestr: {
+          // fakebedrock
+        },
+        'Klavír sólo': {
+          // fakebedrock
+        },
+        'Noty pro trumpetu': {
+          // fakebedrock
+        },
+        Zpěvníky: {
+          // fakebedrock
+        },
+      },
+      'Dárkové zboží': {
         // bedrock
       },
-      "Příslušenství": {
-        "Ladičky a metronomy": {
+      Příslušenství: {
+        'Ladičky a metronomy': {
           // bedrock
         },
-        "Notové stojany a příslušenství": {
+        'Notové stojany a příslušenství': {
           // bedrock
         },
-        "Mikrofonní stojany a příslušenství": {
+        'Mikrofonní stojany a příslušenství': {
           // bedrock
         },
-        "Nástrojové stojany": {
+        'Nástrojové stojany': {
           // bedrock
         },
-        "Obaly a kufry": {
-          "Pouzdra pro dechové nástroje": {
-            "Pouzdra pro flétny": {
+        'Obaly a kufry': {
+          'Pouzdra pro dechové nástroje': {
+            'Pouzdra pro flétny': {
               // bedrock
             },
-            "Pouzdra pro trubky a křídlovky": {
+            'Pouzdra pro trubky a křídlovky': {
               // bedrock
             },
-            "Pouzdar pro klarinety": {
+            'Pouzdar pro klarinety': {
               // bedrock
             },
-            "Pouzdra pro tuby a eufonia": {
+            'Pouzdra pro tuby a eufonia': {
               // bedrock
-            }
+            },
             // fakebedrock
           },
-          "Obaly a kufry pro smyčcové nástroje": {
+          'Obaly a kufry pro smyčcové nástroje': {
             // fakebedrock
           },
-          "Obaly a kufry pro bicí nástroje": {
+          'Obaly a kufry pro bicí nástroje': {
             // fakebedrock
           },
-          "Obaly a kufry pro keyboardy": {
+          'Obaly a kufry pro keyboardy': {
             // fakebedrock
           },
-          "Obaly a kufry pro kytary a baskytary": {
+          'Obaly a kufry pro kytary a baskytary': {
             // fakebedrock
           },
-          "Ostatní pouzdra": {
+          'Ostatní pouzdra': {
             // fakebedrock
-          }
+          },
         },
-        "Učební pomůcky": {
+        'Učební pomůcky': {
           // bedrock
         },
-        "Příslušenství pro žesťové nástroje": {
+        'Příslušenství pro žesťové nástroje': {
           // bedrock
         },
-        "Orchestrální židle": {
+        'Orchestrální židle': {
           // bedrock
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  };
 
   constructor() {
     for (let i = 0; i < 2000; i++) {
-      this.products.push(this.generateProduct())
+      this.products.push(this.generateProduct());
     }
   }
-  generateProduct(): ProductModel{
+  generateProduct(): ProductModel {
     return {
       id: this.getID(),
-      name: this.getRandomString(10,30),
+      name: this.getRandomString(10, 30),
       price: this.getRandomInt(100, 800000),
-      available: this.getRandomItemFromArray([ProductAvailabilityEnum.Available, ProductAvailabilityEnum.Inquiry, ProductAvailabilityEnum.UnderFive]),
-      product_code: this.getRandomString(6,8),
+      available: this.getRandomItemFromArray([
+        ProductAvailabilityEnum.Available,
+        ProductAvailabilityEnum.Inquiry,
+        ProductAvailabilityEnum.UnderFive,
+      ]),
+      product_code: this.getRandomString(6, 8),
       description: this.getRandomString(250, 1000),
       image_paths: this.getRandomImagePaths(),
       productCategory: this.getRandomCategoryArray(this.categories),
-      price_per: this.getRandomItemFromArray([ProductPricePerEnum.Piece, ProductPricePerEnum.Set]),
-      warranty: this.getRandomInt(1, 60)
-    }
+      price_per: this.getRandomItemFromArray([
+        ProductPricePerEnum.Piece,
+        ProductPricePerEnum.Set,
+      ]),
+      warranty: this.getRandomInt(1, 60),
+    };
   }
 
   // Random string generator
-  private getRandomString(min: number, max: number):string {
-    let length: number = Math.floor(Math.random() * (max - min)) + min
+  private getRandomString(min: number, max: number): string {
+    let length: number = Math.floor(Math.random() * (max - min)) + min;
     let result = '';
     let probabilityOfMeasure = 15; // probability of inserting a measure (the lower it is the higher probability)
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
     let counter = 0;
     while (counter < length) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
       counter += 1;
-      if(Math.floor(Math.random()*probabilityOfMeasure)<=1) {
+      if (Math.floor(Math.random() * probabilityOfMeasure) <= 1) {
         probabilityOfMeasure = 13;
-        result += " ";
-        counter += 1
-      }
-      else {
-        probabilityOfMeasure -= 1
+        result += ' ';
+        counter += 1;
+      } else {
+        probabilityOfMeasure -= 1;
       }
     }
     return result;
@@ -672,12 +683,12 @@ export class ProductGeneratorService {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  private getID(){
+  private getID() {
     this.lastID += 1;
     return this.lastID;
   }
 
-  private getRandomBoolean():boolean {
+  private getRandomBoolean(): boolean {
     return Math.random() >= 0.5;
   }
 
@@ -686,18 +697,18 @@ export class ProductGeneratorService {
     return array[randomIndex];
   }
 
-  private getRandomCategory(obj: any){
+  private getRandomCategory(obj: any) {
     const keys = Object.keys(obj);
-    const randomKey = keys[Math.floor(Math.random()*keys.length)]
+    const randomKey = keys[Math.floor(Math.random() * keys.length)];
     return randomKey || null;
   }
 
-  private getRandomCategoryArray(categories: any){
+  private getRandomCategoryArray(categories: any) {
     let path: string[] = [];
 
     while (Object.keys(categories).length > 0) {
-      let randomKey = this.getRandomCategory(categories)
-      if(randomKey === null) break;
+      let randomKey = this.getRandomCategory(categories);
+      if (randomKey === null) break;
 
       path.push(randomKey);
       categories = categories[randomKey];
@@ -705,15 +716,15 @@ export class ProductGeneratorService {
     return path;
   }
 
-  private randomProperty<T>(obj: { [key: string]: T }):T {
+  private randomProperty<T>(obj: { [key: string]: T }): T {
     const keys = Object.keys(obj);
-    return obj[keys[keys.length * Math.random() << 0]];
-  };
+    return obj[keys[(keys.length * Math.random()) << 0]];
+  }
 
   private getRandomImagePaths(): string[] {
     let result = [];
-    for(let i = 0; i < this.getRandomInt(1, 6); i++){
-      result.push(this.getRandomItemFromArray(this.imagePaths))
+    for (let i = 0; i < this.getRandomInt(1, 6); i++) {
+      result.push(this.getRandomItemFromArray(this.imagePaths));
     }
     return result;
   }

@@ -13,7 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MessageComponent } from './content/message/message.component';
 import { ContactComponent } from './footer/contact/contact.component';
 import { FootComponent } from './footer/foot/foot.component';
-import {ProductGeneratorService} from "./services/product-generator.service";
+import { ProductGeneratorService } from './services/product-generator.service';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { KatalogComponent } from './views/katalog-dummy/katalog/katalog.component';
 import { DechyComponent } from './views/katalog-dummy/katalog/dechy/dechy.component';
@@ -27,7 +27,7 @@ import { PrislusenstviComponent } from './views/katalog-dummy/katalog/prislusens
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { FiltersComponent } from './content/filters/filters.component';
 import { KatalogDummyComponent } from './views/katalog-dummy/katalog-dummy.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './views/registration/registration.component';
 import { ProductDetailComponent } from './content/product-list/product-detail/product-detail.component';
 import { KatalogBreadcrumbsComponent } from './content/katalog-breadcrumbs/katalog-breadcrumbs.component';
@@ -65,13 +65,8 @@ import { GalleryComponent } from './content/gallery/gallery.component';
     HighlightDirective,
     GalleryComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        ReactiveFormsModule
-    ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [ProductGeneratorService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

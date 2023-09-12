@@ -18,10 +18,8 @@
   color: var(--main-red);
   border-right: 1px solid var(--main-red);
   font-weight: bold;
-  font-family: 'MonteCarlo', serif;
+  font-family: "MonteCarlo", serif;
 }
-
-
 
 .logo span:nth-child(1) {
   font-size: 35px;
@@ -55,10 +53,9 @@ p {
 @media screen and (max-width: 1270px) {
   .container {
     flex-direction: column;
-
   }
 
-  .message{
+  .message {
     margin: 0;
     padding: 0;
   }
@@ -84,7 +81,6 @@ p {
   .logo span:nth-child(3) {
     font-size: 40px;
   }
-
 
   .message {
     height: auto;

@@ -19,5 +19,5 @@ export enum ProductPricePerEnum {
 export enum ProductAvailabilityEnum {
   Inquiry,
   UnderFive,
-  Available
+  Available,
 }
